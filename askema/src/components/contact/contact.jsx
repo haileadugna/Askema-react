@@ -1,7 +1,47 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './contact.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
+
+  const notify = () => toast("Thank you for contacting us!");
+  const [formData, setFormData] = useState({
+    subject: '',
+    sender: '',
+    message: '',
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:3333/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      // console.log('response', response.ok)
+      if (response.ok) {
+        // Email sent successfully, show a success message
+        
+        notify();
+        setFormData({
+          subject: '',
+          sender: '',
+          message: '',
+        });
+      } else {
+        // Handle the error
+        alert('Email sending failed');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
   return (
     <div className='bodyOfcontact'>
       <section className='contact'>
@@ -38,22 +78,37 @@ export default function Contact() {
           </div>
 
           <div className="contactForm">
-            <form action="">
+            <form action="" onSubmit={handleSubmit} >
               <h2>Send Message</h2>
               <div className="inputBox">
-                <input type="text" name="" required="required" />
+                <input type="text" 
+                name="subject" 
+                required="required"  
+                value={formData.subject}
+                onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                />
                 <span>Full Name</span>
               </div>
               <div className="inputBox">
-                <input type="text" name="" required="required" />
+                <input type="text" 
+                name="sender"
+                value={formData.sender}
+                onChange={(e) => setFormData({...formData, sender: e.target.value})} 
+                required="required" 
+                />
                 <span>Email</span>
               </div>
               <div className="inputBox">
-                <textarea required="required"></textarea>
+                <textarea 
+                required="required"
+                value={formData.message}
+                onChange={(e) => setFormData({...formData, message: e.target.value})}
+                ></textarea>
                 <span>Type your Message...</span>
               </div>
               <div className="inputBox">
-                <input type="submit" name="" value="Send" />
+                <input type="submit" name="send" value="Send"  />
+                <ToastContainer />
               </div>
 
             </form>

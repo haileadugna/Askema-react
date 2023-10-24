@@ -39,10 +39,7 @@ export default function Footer() {
             <a href="/">
               <li>Home</li>
             </a>
-            <a href="/services">
-              <li>Services</li>
-            </a>
-            
+                  
             <a href="/aboutus">
               <li>AboutUs</li>
             </a>
@@ -53,10 +50,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="row">
-        <div className="col">
-          <p id='copy'>© 2023 | Developed by <strong>Hake</strong></p>
-        </div>
-        <div className="social">
+      <div className="social">
           
           <ul>
             <li><a href="https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f"></i></a></li>
@@ -66,6 +60,11 @@ export default function Footer() {
             <li><a href="https://www.linkedin.com/" target="_blank"><i className="fab fa-telegram"></i></a></li>
           </ul>
         </div>
+
+        <div className="col">
+          <p id='copy'>© 2023 | Developed by <strong>Hake</strong></p>
+        </div>
+        
       </div>
 
       {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className='svgForFooter'>
