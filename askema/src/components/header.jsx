@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useLocation } from 'react-router-dom'; 
+import { useLocation, NavLink } from 'react-router-dom'; 
 import './header.css'
 import image from '../Assets/Askema logo.png';
 
@@ -26,18 +26,12 @@ export default function Header() {
       </div>
       <div className="header_nav">
       <ul>
-          
-            <a href="/"><li className={location.pathname === '/' ? 'active' : ''}>Home</li></a>
-
-            <a href="/aboutus"><li className={location.pathname === '/aboutus' ? 'active' : ''}>AboutUs</li></a>
-          
-            <a href="/services"><li className={location.pathname === '/services' ? 'active' : ''}>Services</li></a>
-
-            <a href="/products"><li className={location.pathname === '/products' ? 'active' : ''}>Products</li></a>
-
-            <a href="/contactus"><li className={location.pathname === '/contactus' ? 'active' : ''}>ContactUs</li></a>
-
-        </ul>
+        <li><NavLink to="/" activeClassName="active" exact>Home</NavLink></li>
+        <li><NavLink to="/aboutus" activeClassName="active">AboutUs</NavLink></li>
+        <li><NavLink to="/services" activeClassName="active">Services</NavLink></li>
+        <li><NavLink to="/products" activeClassName="active">Products</NavLink></li>
+        <li><NavLink to="/contactus" activeClassName="active">ContactUs</NavLink></li>
+      </ul>
       </div>
       
 
