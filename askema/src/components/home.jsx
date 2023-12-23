@@ -6,6 +6,7 @@ import About from './body/about'
 import Footer from './footer'
 import Cleints from './body/cleints'
 import WhatWeDo from './body/whatwedo'
+import Comment from './blog/comment'
 
 export default function Home() {
 
@@ -22,7 +23,9 @@ export default function Home() {
 
         <Cleints/>
         <hr />
-        <Footer/>
+        
+        <Comment/>
+        <div className='bg-white p-3' ></div>
       </div>
       
     )

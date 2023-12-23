@@ -1,10 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: false,
+  
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      }
+    },
     colors: {
       primary: '#ff6363',
       secondary: {
@@ -13,6 +20,11 @@ export default {
       },
     },
   },
+  variants: {
+    extend: {
+      borderColor: ['focus-visible'],
+      opacity: ['disabled'],
+    }
+  },
   plugins: [],
 }
-

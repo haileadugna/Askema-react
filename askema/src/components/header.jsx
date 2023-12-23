@@ -1,70 +1,98 @@
-import React, { useState } from 'react'
-import { useLocation, NavLink } from 'react-router-dom'; 
-import './header.css'
-import image from '../Assets/Askema logo.png';
+import React, { useState } from 'react';
+import { useLocation, NavLink } from 'react-router-dom';
+import logo from '../Assets/Askema logo.png';
 
 export default function Header() {
+  const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const location = useLocation(); 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
-    
   return (
+    <nav className="navbar navbar-expand-lg bg-transparent py-3 shadow-none">
+      <div className="container">
+        <NavLink to="/" className="navbar-brand w-8" data-config-id="brand">
+          <img src={logo} width="120" height="60" alt="Logo" />
+        </NavLink>
 
-    
-    <div className='header' >
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1440 320" className='svg'>
-            <path fill="brown" fill-opacity="1" d="M0,192L40,186.7C80,181,160,171,240,181.3C320,192,400,224,480,218.7C560,213,640,171,720,154.7C800,139,880,149,960,170.7C1040,192,1120,224,1200,245.3C1280,267,1360,277,1400,282.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
-        </svg>
-      <div className="header_logo">
-        <img src={image} alt="Logo" />
-        {/* <h2>Askema Engineering</h2> */}
-      </div>
-      <div className="header_nav">
-      <ul>
-        <li><NavLink to="/" activeClassName="active" exact>Home</NavLink></li>
-        <li><NavLink to="/aboutus" activeClassName="active">AboutUs</NavLink></li>
-        <li><NavLink to="/services" activeClassName="active">Services</NavLink></li>
-        <li><NavLink to="/products" activeClassName="active">Products</NavLink></li>
-        <li><NavLink to="/contactus" activeClassName="active">ContactUs</NavLink></li>
-      </ul>
-      </div>
-      
-
-      <div className="menu_icon" onClick={toggleMenu}>
-        <i class="fas fa-bars"></i>
-      </div>
-
-      {/* {isMenuOpen && ( */}
-        <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
-          <ul>
-            <a href="/">
-              <li>Home</li>
-            </a>
-
-            <a href="/aboutus">
-              <li>AboutUs</li>
-            </a>
-
-            <a href="/services">
-              <li>Services</li>
-            </a>
-            
-            <a href="/products">
-              <li>Products</li>
-            </a>
-            
-            <a href="/contactus">
-              <li>ContactUs</li>
-            </a>
+        <button
+          className="navbar-toggler shadow-none ms-2 custom-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navigation"
+          aria-controls="navigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onClick={toggleMenu}
+        >
+          <span className="navbar-toggler-icon mt-2">
+            <span className="navbar-toggler-bar bar1"></span>
+            <span className="navbar-toggler-bar bar2"></span>
+            <span className="navbar-toggler-bar bar3"></span>
+          </span>
+        </button>
+        <div className={`collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ${isMenuOpen ? 'show' : ''}`} id="navigation">
+          <ul className="navbar-nav navbar-nav-hover ms-auto">
+            <li className="nav-item mx-2">
+              <NavLink to="/" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`}>
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-item mx-2 dropdown">
+              <a
+                href="#"
+                className="nav-link ps-2 cursor-pointer dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                About
+              </a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <NavLink to="/aboutus" className="dropdown-item">
+                  Founder
+                </NavLink>
+                <NavLink to="/about" className="dropdown-item">
+                  About the Company
+                </NavLink>
+              </div>
+            </li>
+            <li className="nav-item mx-2 dropdown">
+              <a
+                href="#"
+                className="nav-link ps-2 cursor-pointer dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Product
+              </a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <NavLink to="/product" className="dropdown-item">
+                  Product
+                </NavLink>
+                <NavLink to="/services" className="dropdown-item">
+                  Services
+                </NavLink>
+              </div>
+            </li>
+            <li className="nav-item mx-2">
+              <a href="javascript:void(0);" className="nav-link ps-2 cursor-pointer">
+                Blog
+              </a>
+            </li>
+            <li className="nav-item mx-2">
+              <a href="/contactus" className="btn mb-0 cursor-pointer bg-gradient-dark">
+                Contact Us
+              </a>
+            </li>
           </ul>
         </div>
-      {/* )} */}
-
-    </div>
-  )
+      </div>
+    </nav>
+  );
 }

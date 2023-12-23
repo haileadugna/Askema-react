@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    background-image: url('../../Assets/contactbackground.jpg');
+    background-color: gray;
     background-size: cover;
     z-index: -999; 
 

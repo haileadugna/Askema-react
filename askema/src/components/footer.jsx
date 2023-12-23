@@ -1,39 +1,35 @@
 import React from 'react';
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faInstagram, faTiktok, faTelegram } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
   return (
-    <footer className="footer py-5">
+    <footer className="bg-light py-5">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="mb-5 md:mb-0">
-            <h6 className="text-uppercase mb-2">Wedding of your dreams</h6>
-            <p className="mb-4 pb-2">
-              The next generation of design systems.
-            </p>
-            <div className="flex space-x-4">
+        <div className="row">
+          <div className="col-md-4 mb-4 mb-md-0">
+            <div className="d-flex justify-content-between p-5">
               <a href="javascript:;" className="text-secondary">
-                <span className="text-lg fab fa-facebook" aria-hidden="true"></span>
+                <FontAwesomeIcon icon={faFacebook} size="lg" />
               </a>
               <a href="javascript:;" className="text-secondary">
-                <span className="text-lg fab fa-twitter" aria-hidden="true"></span>
+                <FontAwesomeIcon icon={faTwitter} size="lg" />
               </a>
               <a href="javascript:;" className="text-secondary">
-                <span className="text-lg fab fa-instagram" aria-hidden="true"></span>
+                <FontAwesomeIcon icon={faInstagram} size="lg" />
               </a>
               <a href="javascript:;" className="text-secondary">
-                <span className="text-lg fab fa-pinterest" aria-hidden="true"></span>
+                <FontAwesomeIcon icon={faTelegram} size="lg" />
               </a>
               <a href="javascript:;" className="text-secondary">
-                <span className="text-lg fab fa-github" aria-hidden="true"></span>
+                <FontAwesomeIcon icon={faTiktok} size="lg" />
               </a>
             </div>
           </div>
 
-          <div className="col-span-2 md:col-span-1">
-            <h6 className="text-sm">Company</h6>
-            <ul className="flex flex-col space-y-2">
+          <div className="col-md-4">
+            <h6 className="text-sm text-secondary">Company</h6>
+            <ul className="list-unstyled">
               <li>
                 <a href="javascript:;" className="text-secondary">About Us</a>
               </li>
@@ -41,7 +37,7 @@ export default function Footer() {
                 <a href="javascript:;" className="text-secondary">Careers</a>
               </li>
               <li>
-                <a href="javascript:;" className="text-secondary">Press</a>
+                <a href="javascript:;" className="text-secondary"></a>
               </li>
               <li>
                 <a href="javascript:;" className="text-secondary">Blog</a>
@@ -49,45 +45,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-span-2 md:col-span-1">
-            <h6 className="text-sm">Pages</h6>
-            <ul className="flex flex-col space-y-2">
-              <li>
-                <a href="javascript:;" className="text-secondary">Login</a>
-              </li>
-              <li>
-                <a href="javascript:;" className="text-secondary">Register</a>
-              </li>
-              <li>
-                <a href="javascript:;" className="text-secondary">Add list</a>
-              </li>
-              <li>
-                <a href="javascript:;" className="text-secondary">Contact</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="col-span-2 md:col-span-1">
-            <h6 className="text-sm">Legal</h6>
-            <ul className="flex flex-col space-y-2">
-              <li>
-                <a href="javascript:;" className="text-secondary">Terms</a>
-              </li>
-              <li>
-                <a href="javascript:;" className="text-secondary">About Us</a>
-              </li>
-              <li>
-                <a href="javascript:;" className="text-secondary">Team</a>
-              </li>
-              <li>
-                <a href="javascript:;" className="text-secondary">Privacy</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="col-span-2 md:col-span-1">
-            <h6 className="text-sm">Resources</h6>
-            <ul className="flex flex-col space-y-2">
+          <div className="col-md-4">
+            <h6 className="text-sm text-secondary">Resources</h6>
+            <ul className="list-unstyled">
               <li>
                 <a href="javascript:;" className="text-secondary">Blog</a>
               </li>
@@ -98,21 +58,23 @@ export default function Footer() {
                 <a href="javascript:;" className="text-secondary">Product</a>
               </li>
               <li>
-                <a href="javascript:;" className="text-secondary">Pricing</a>
+                <a href="javascript:;" className="text-secondary"></a>
               </li>
             </ul>
           </div>
         </div>
 
-        <hr className="horizontal dark mt-8 mb-4" />
+        <hr className="border-dark mt-4 mb-4" />
 
-        <div className="text-center">
+        <div className="text-center d-flex justify-content-center space-10">
           <p className="text-sm text-secondary">
-            Copyright © 2022 Soft by Creative Tim & Loopple.
+            Copyright © 2022
+          </p>
+          <p className="text-sm text-secondary">
+            developed by <a href="https://www.linkedin.com/in/ahmed-elsayed-0b0b3b1b0/" className="text-secondary">bytegineus lab</a>
           </p>
         </div>
       </div>
     </footer>
-
   );
 }

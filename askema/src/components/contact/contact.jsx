@@ -115,18 +115,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="contactFooter">
-          <div className="social">
-            
-            <ul>
-              <li><a href="https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f"></i></a></li>
-              <li><a href="https://twitter.com/" target="_blank"><i className="fab fa-x"></i></a></li>
-              <li><a href="https://www.instagram.com/" target="_blank"><i className="fab fa-instagram"></i></a></li>
-              <li><a href="https://www.linkedin.com/" target="_blank"><i className="fab fa-linkedin-in"></i></a></li>
-              <li><a href="https://www.linkedin.com/" target="_blank"><i className="fab fa-telegram"></i></a></li>
-            </ul>
-          </div>
-        </div>
+        
         
       </section>
       

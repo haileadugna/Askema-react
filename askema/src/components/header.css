@@ -1,76 +1,38 @@
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #f8f9fa;
+/* header.css */
+
+/* Custom Toggler Button Color */
+.custom-toggler {
+  background-color: gray; /* Replace with your desired color */
+  /* You can customize other styles like border, hover effects, etc. */
 }
 
-.header_logo img {
-  height: 50px;
+/* Navbar Link Styles */
+.navbar-nav .nav-link {
+  color: #000; /* Default color */
 }
 
-.header_nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: gray; /* Replace with your desired hover color */
+  /* You can customize other styles like font-weight, underline, etc. */
 }
 
-.header_nav ul li {
-  cursor: pointer;
+/* Navbar Dropdown Styles */
+.navbar-nav .dropdown-toggle::after {
+  margin-left: 0.5rem; /* Spacing between link text and arrow */
 }
 
-.header_nav ul li a {
-  text-decoration: none;
-  color: #333;
+.dropdown-menu {
+  background-color: #fff; /* Dropdown background color */
+  /* You can customize other styles like border, padding, etc. */
 }
 
-.header_nav ul li a.active {
-  color: #007bff;
+.dropdown-item {
+  color: #000; /* Dropdown item text color */
+  /* You can customize other styles like hover color, padding, etc. */
 }
 
-.menu_icon {
-  display: none;
-  cursor: pointer;
-}
-
-.mobile-menu {
-  display: none;
-}
-
-.mobile-menu.active {
-  display: block;
-}
-
-.mobile-menu ul {
-  list-style: none;
-}
-
-.mobile-menu ul li {
-  display: block;
-  margin: 50px 0;
-  line-height: 20px;
-}
-
-.mobile-menu ul a {
-  font-size: 20px;
-  font-weight: 300;
-  font-family: 'Times New Roman', Times, serif;
-  text-decoration: none;
-  color: white;
-}
-
-.mobile-menu ul a:hover {
-  color: gray;
-  transition: all 0.5s ease-in-out;
-}
-
-@media (max-width: 768px) {
-  .header_nav {
-    display: none;
-  }
-
-  .menu_icon {
-    display: block;
-  }
+.dropdown-item:hover {
+  background-color: gray; /* Replace with your desired hover color */
+  /* You can customize other styles like text color, padding, etc. */
 }
