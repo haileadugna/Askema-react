@@ -1,17 +1,29 @@
+// Header.js
 import React, { useState } from 'react';
 import { useLocation, NavLink } from 'react-router-dom';
 import logo from '../Assets/Askema logo.png';
+import './header.css';
 
 export default function Header() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
+  const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const toggleAboutDropdown = () => {
+    setIsAboutDropdownOpen(!isAboutDropdownOpen);
+  };
+
+  const toggleProductDropdown = () => {
+    setIsProductDropdownOpen(!isProductDropdownOpen);
+  };
+
   return (
-    <nav className="navbar navbar-expand-lg bg-transparent py-3 shadow-none">
+    <nav className="navbar navbar-expand-lg bg-transparent  py-3 shadow-none">
       <div className="container">
         <NavLink to="/" className="navbar-brand w-8" data-config-id="brand">
           <img src={logo} width="120" height="60" alt="Logo" />
@@ -28,9 +40,7 @@ export default function Header() {
           onClick={toggleMenu}
         >
           <span className="navbar-toggler-icon mt-2">
-            <span className="navbar-toggler-bar bar1"></span>
-            <span className="navbar-toggler-bar bar2"></span>
-            <span className="navbar-toggler-bar bar3"></span>
+            <i className="fas fa-bars"></i> {/* Font Awesome bars icon */}
           </span>
         </button>
         <div className={`collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ${isMenuOpen ? 'show' : ''}`} id="navigation">
@@ -40,55 +50,63 @@ export default function Header() {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item mx-2 dropdown">
+            <li className="nav-item mx-2 dropdown " onMouseEnter={toggleAboutDropdown} onMouseLeave={toggleAboutDropdown}>
               <a
                 href="#"
-                className="nav-link ps-2 cursor-pointer dropdown-toggle"
+                className={`nav-link ps-2 cursor-pointer dropdown-toggle ${isAboutDropdownOpen ? 'active' : ''}`}
                 role="button"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
               >
                 About
               </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <NavLink to="/aboutus" className="dropdown-item">
+              <div
+                className={`dropdown-menu ${isAboutDropdownOpen ? 'show' : ''}`}
+                aria-labelledby="navbarDropdown"
+                style={{ width: '100%', margin: 0 }}
+              >
+                <NavLink to="/aboutus" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
                   Founder
+                  <img src={logo} alt="Icon" height='70px' className="icon-image" />
+                  
                 </NavLink>
-                <NavLink to="/about" className="dropdown-item">
+                <NavLink to="/about" className="dropdown-item" style={{ height: '80px' }}>
+                  <img src="https://via.placeholder.com/30" alt="Icon" className="icon-image" />
                   About the Company
                 </NavLink>
               </div>
             </li>
-            <li className="nav-item mx-2 dropdown">
+
+            <li className="nav-item mx-2 dropdown" onMouseEnter={toggleProductDropdown} onMouseLeave={toggleProductDropdown}>
               <a
                 href="#"
-                className="nav-link ps-2 cursor-pointer dropdown-toggle"
+                className={`nav-link ps-2 cursor-pointer dropdown-toggle ${isProductDropdownOpen ? 'active' : ''}`}
                 role="button"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
               >
                 Product
               </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <NavLink to="/product" className="dropdown-item">
+              <div
+                className={`dropdown-menu ${isProductDropdownOpen ? 'show' : ''}`}
+                aria-labelledby="navbarDropdown"
+                style={{ width: '100%', margin: 0 }}
+              >
+                <NavLink to="/product" className="dropdown-item" style={{ height: '80px' }}>
+                  <img src="https://via.placeholder.com/30" alt="Icon" className="icon-image" />
                   Product
                 </NavLink>
-                <NavLink to="/services" className="dropdown-item">
+                <NavLink to="/services" className="dropdown-item" style={{ height: '80px' }}>
+                  <img src="https://via.placeholder.com/30" alt="Icon" className="icon-image" />
                   Services
                 </NavLink>
               </div>
             </li>
             <li className="nav-item mx-2">
-              <a href="javascript:void(0);" className="nav-link ps-2 cursor-pointer">
+              <NavLink to="/comment" className="btn mb-0 cursor-pointer bg-gradient-dark">
                 Blog
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item mx-2">
-              <a href="/contactus" className="btn mb-0 cursor-pointer bg-gradient-dark">
+              <NavLink to="/contactus" className="btn mb-0 cursor-pointer bg-gradient-dark">
                 Contact Us
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

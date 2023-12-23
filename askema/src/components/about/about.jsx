@@ -65,12 +65,11 @@ export default function AboutUs() {
 
               </div>
             </div>
-
+            
             <Cleints/>
           </div>
       </section>
-      {/* <hr /> */}
-      <Footer/>
+
     </div>
   )
 }

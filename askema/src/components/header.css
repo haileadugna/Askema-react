@@ -1,38 +1,24 @@
 /* header.css */
-
-/* Custom Toggler Button Color */
-.custom-toggler {
-  background-color: gray; /* Replace with your desired color */
-  /* You can customize other styles like border, hover effects, etc. */
-}
-
-/* Navbar Link Styles */
-.navbar-nav .nav-link {
-  color: #000; /* Default color */
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: gray; /* Replace with your desired hover color */
-  /* You can customize other styles like font-weight, underline, etc. */
-}
-
-/* Navbar Dropdown Styles */
-.navbar-nav .dropdown-toggle::after {
-  margin-left: 0.5rem; /* Spacing between link text and arrow */
-}
-
 .dropdown-menu {
-  background-color: #fff; /* Dropdown background color */
-  /* You can customize other styles like border, padding, etc. */
+  padding: 0;
+  margin: 0;
+  border: 20px solid #fff;
+  min-width: 20rem;
 }
 
 .dropdown-item {
-  color: #000; /* Dropdown item text color */
-  /* You can customize other styles like hover color, padding, etc. */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.icon-image {
+  margin-right: 10px;
 }
 
 .dropdown-item:hover {
-  background-color: gray; /* Replace with your desired hover color */
-  /* You can customize other styles like text color, padding, etc. */
+  background-color: #f8f9fa; /* Change to the color you prefer */
 }

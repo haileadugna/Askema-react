@@ -9,19 +9,19 @@ export default function Footer() {
         <div className="row">
           <div className="col-md-4 mb-4 mb-md-0">
             <div className="d-flex justify-content-between p-5">
-              <a href="javascript:;" className="text-secondary">
+              <a href="#" className="text-secondary">
                 <FontAwesomeIcon icon={faFacebook} size="lg" />
               </a>
-              <a href="javascript:;" className="text-secondary">
+              <a href="#" className="text-secondary">
                 <FontAwesomeIcon icon={faTwitter} size="lg" />
               </a>
-              <a href="javascript:;" className="text-secondary">
+              <a href="#" className="text-secondary">
                 <FontAwesomeIcon icon={faInstagram} size="lg" />
               </a>
-              <a href="javascript:;" className="text-secondary">
+              <a href="#" className="text-secondary">
                 <FontAwesomeIcon icon={faTelegram} size="lg" />
               </a>
-              <a href="javascript:;" className="text-secondary">
+              <a href="#" className="text-secondary">
                 <FontAwesomeIcon icon={faTiktok} size="lg" />
               </a>
             </div>
@@ -31,16 +31,16 @@ export default function Footer() {
             <h6 className="text-sm text-secondary">Company</h6>
             <ul className="list-unstyled">
               <li>
-                <a href="javascript:;" className="text-secondary">About Us</a>
+                <a href="#" className="text-secondary">About Us</a>
               </li>
               <li>
-                <a href="javascript:;" className="text-secondary">Careers</a>
+                <a href="#" className="text-secondary">Careers</a>
               </li>
               <li>
-                <a href="javascript:;" className="text-secondary"></a>
+                <a href="#" className="text-secondary"></a>
               </li>
               <li>
-                <a href="javascript:;" className="text-secondary">Blog</a>
+                <a href="#" className="text-secondary">Blog</a>
               </li>
             </ul>
           </div>
@@ -49,16 +49,16 @@ export default function Footer() {
             <h6 className="text-sm text-secondary">Resources</h6>
             <ul className="list-unstyled">
               <li>
-                <a href="javascript:;" className="text-secondary">Blog</a>
+                <a href="#" className="text-secondary">Blog</a>
               </li>
               <li>
-                <a href="javascript:;" className="text-secondary">Service</a>
+                <a href="#" className="text-secondary">Service</a>
               </li>
               <li>
-                <a href="javascript:;" className="text-secondary">Product</a>
+                <a href="#" className="text-secondary">Product</a>
               </li>
               <li>
-                <a href="javascript:;" className="text-secondary"></a>
+                <a href="#" className="text-secondary"></a>
               </li>
             </ul>
           </div>

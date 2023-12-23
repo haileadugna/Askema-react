@@ -25,7 +25,7 @@ export default function Home() {
         <hr />
         
         <Comment/>
-        <div className='bg-white p-3' ></div>
+        {/* <div className='bg-white p-3' ></div> */}
       </div>
       
     )

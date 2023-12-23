@@ -8,6 +8,7 @@ import Services from './components/services/services';
 import Contact from './components/contact/contact';
 import Product from './components/product/product';
 import Footer from './components/footer';
+import Comment from './components/blog/comment';
 
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route exact path="/products">
             <Product />
+          </Route>
+          <Route exact path="/comment">
+            <Comment/>
           </Route>
           
 

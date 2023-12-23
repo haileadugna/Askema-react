@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import CountUp from 'countup';
-import flatpickr from 'flatpickr';
 import 'flatpickr/dist/themes/light.css';
 
 export default function Comment() {
@@ -24,6 +22,7 @@ export default function Comment() {
 
   return (
     <section className="bg-light py-3">
+      
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
@@ -99,6 +98,7 @@ export default function Comment() {
           </div>
         </div>
       </div>
+      <div className='p-4 bg-white'></div>
     </section>
   );
 }

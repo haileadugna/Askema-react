@@ -66,35 +66,67 @@
 }
 
 
-/* what we do css */
+/* cleints.css */
 
-.whatwedo{
-    background: #fff;
-    text-align: center;
+.whatwedo {
+    padding: 2rem;
+}
+  
+.product-card {
+    position: relative; /* Add this to establish a stacking context */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #ff0000;
+    transition: width 0.3s ease-out;
+}
+
+.product-card:hover::before {
+    width: 100%;
+}
+
+.product-info {
     padding: 20px;
 }
 
-.whatwedo hr{
+.product-image {
+    width: 200px;
+    height: 220px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+}
+
+.whatwedo h1 {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+    margin: 0;
+    font-size: 36px;
+    color: blue;
+}
+
+.whatwedo hr {
     width: 40px;
     height: 1px;
     background-color: red;
     margin-bottom: 20px;
-}
-
-.whatwedo h1{
-    font-size: 36px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    padding: 5px;
-    margin: 0;
-    color: blue;
-}
-
-.whatwedo img{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 10px;
-    transition: all 0.5s ease-in-out;
-    filter: drop-shadow(0 0 0.1rem rgb(231, 215, 215));
 }

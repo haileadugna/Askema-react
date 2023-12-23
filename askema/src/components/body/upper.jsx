@@ -57,11 +57,11 @@ export default function Upper() {
             
 
             <div className="btn">
-                 <p>{Text[currentImageIndex]}</p>
+                 {/* <p>{Text[currentImageIndex]}</p> */}
                 <div className="readmorebtn">
                     {/* <button className='read'>Read More</button>    */}
 
-                    <a href="./contactUS">
+                    <a href="./contactus">
                         <button className='contactupper'>Contact Us</button>
                     </a>
                 </div>
