@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <div>
     
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }

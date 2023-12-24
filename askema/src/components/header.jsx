@@ -64,14 +64,15 @@ export default function Header() {
                 aria-labelledby="navbarDropdown"
                 style={{ width: '100%', margin: 0 }}
               >
-                <NavLink to="/aboutus" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
+                <NavLink to="/aboutfounder" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
                   Founder
                   <img src={logo} alt="Icon" height='70px' className="icon-image" />
                   
                 </NavLink>
-                <NavLink to="/about" className="dropdown-item" style={{ height: '80px' }}>
-                  <img src="https://via.placeholder.com/30" alt="Icon" className="icon-image" />
-                  About the Company
+                <NavLink to="/aboutus" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
+                  About The Compony
+                  <img src={logo} alt="Icon" height='70px' className="icon-image" />
+                  
                 </NavLink>
               </div>
             </li>
@@ -89,13 +90,15 @@ export default function Header() {
                 aria-labelledby="navbarDropdown"
                 style={{ width: '100%', margin: 0 }}
               >
-                <NavLink to="/product" className="dropdown-item" style={{ height: '80px' }}>
-                  <img src="https://via.placeholder.com/30" alt="Icon" className="icon-image" />
+                <NavLink to="/products" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
                   Product
+                  <img src={logo} alt="Icon" height='70px' className="icon-image" />
+                  
                 </NavLink>
-                <NavLink to="/services" className="dropdown-item" style={{ height: '80px' }}>
-                  <img src="https://via.placeholder.com/30" alt="Icon" className="icon-image" />
+                <NavLink to="/services" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
                   Services
+                  <img src={logo} alt="Icon" height='70px' className="icon-image" />
+                  
                 </NavLink>
               </div>
             </li>

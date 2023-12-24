@@ -68,10 +68,10 @@ export default function Footer() {
 
         <div className="text-center d-flex justify-content-center space-10">
           <p className="text-sm text-secondary">
-            Copyright © 2022
+            Copyright © {new Date().getFullYear()} |
           </p>
           <p className="text-sm text-secondary">
-            developed by <a href="https://www.linkedin.com/in/ahmed-elsayed-0b0b3b1b0/" className="text-secondary">bytegineus lab</a>
+           | <a href="https://www.linkedin.com/in/ahmed-elsayed-0b0b3b1b0/" className="text-secondary">bytegineus lab</a>
           </p>
         </div>
       </div>
