@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useLocation, NavLink } from 'react-router-dom';
 import logo from '../Assets/Askema logo.png';
 import './header.css';
+import LanguageSwitcher from '../LanguageSwitcher';
 
 export default function Header() {
   const location = useLocation();
@@ -110,6 +111,8 @@ export default function Header() {
             </li>
           </ul>
         </div>
+
+        <LanguageSwitcher />
       </div>
     </nav>
   );

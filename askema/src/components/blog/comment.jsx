@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import 'flatpickr/dist/themes/light.css';
+import { useTranslation } from 'react-i18next';
 
 export default function Comment() {
   useEffect(() => {
@@ -20,6 +21,8 @@ export default function Comment() {
     return () => clearInterval(intervalId);
   }, []);
 
+  const {t} = useTranslation();
+
   return (
     <section className="bg-light py-3">
       
@@ -30,7 +33,7 @@ export default function Comment() {
               <div className="mb-4">
                 <i className="fas opacity-10 fa-quote-right fa-3x text-primary"></i>
               </div>
-              <h2 className="h4 mb-4 text-success">What Our Clients Are Saying</h2>
+              <h2 className="h4 mb-4 text-success">{t("What Our Clients Are Saying")}</h2>
             </div>
           </div>
           <div className="col-lg-6">
