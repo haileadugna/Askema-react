@@ -1,10 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faTiktok, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import './footer.css';
 
 export default function Footer() {
   return (
-    <footer className="bg-light py-5">
+    <footer className="footer py-5">
       <div className="container">
         <div className="row">
           <div className="col-md-4 mb-4 mb-md-0">
