@@ -40,7 +40,7 @@ export default function Header() {
           aria-label="Toggle navigation"
           onClick={toggleMenu}
         >
-          <span className="navbar-toggler-icon mt-2">
+          <span className="navbar-toggler-icon mt-2 text-white">
             <i className="fas fa-bars"></i> {/* Font Awesome bars icon */}
           </span>
         </button>

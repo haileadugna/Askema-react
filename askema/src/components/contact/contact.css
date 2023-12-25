@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    background-color: #eee;
+    /* background-color: #eee; */
     background-size: cover;
     z-index: -999; 
 
@@ -24,7 +24,7 @@
 
 .contact .content p{
     font-weight: 300;
-    /* color: #fff; */
+    color: #fff;
     text-align: center;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .contact .contactinfo .box .text p{
-    /* color: #fff; */
+    color: #fff;
     margin-top: 0;
 }
 

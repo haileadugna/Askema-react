@@ -102,7 +102,7 @@
 
 .product-image {
     width: 200px;
-    height: 220px;
+    height: 200px;
     margin-right: 20px;
     object-fit: cover;
 }
@@ -129,4 +129,33 @@ p {
     height: 1px;
     background-color: red;
     margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 670px) {
+    .whatwedo {
+        padding: 0;
+    }
+    .whatwedo h1 {
+        font-size: 30px;
+    }
+    .whatwedo p {
+        font-size: 15px;
+    }
+    .product-image {
+        width: 100px;
+        height: 120px;
+        margin-right: 20px;
+        object-fit: cover;
+    }
+    .product-info {
+        padding: 10px;
+    }
+    .product-card {
+        margin-bottom: 20px;
+    }
+    .product-card::before {
+        height: 2px;
+    }
+    
 }

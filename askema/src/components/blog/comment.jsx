@@ -101,7 +101,7 @@ export default function Comment() {
           </div>
         </div>
       </div>
-      <div className='p-4 bg-white'></div>
+      <div className='p-4 '></div>
     </section>
   );
 }
