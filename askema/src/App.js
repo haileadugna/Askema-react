@@ -9,6 +9,7 @@ import Contact from './components/contact/contact';
 import Product from './components/product/product';
 import Footer from './components/footer';
 import Comment from './components/blog/comment';
+import Founders from './components/about/founders';
 
 
 function App() {
@@ -35,7 +36,9 @@ function App() {
           <Route exact path="/comment">
             <Comment/>
           </Route>
-          
+          <Route exact path="/founders">
+            <Founders/>
+          </Route>
 
         </Switch>
       </div>

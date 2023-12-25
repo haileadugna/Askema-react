@@ -1,5 +1,5 @@
 .clients{
-    background: #fff;
+    /* background: #fff; */
     text-align: center;  
     margin: 50px; 
 }
@@ -24,7 +24,7 @@
     font-family: 'Times New Roman', Times, serif;
     padding: 5px;
     margin: 0;
-    color: #8c8c8f;
+    color: #fff;
 }
 
 .clients_logos{

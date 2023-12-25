@@ -24,8 +24,8 @@ export default function Header() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-transparent  py-3 shadow-none">
-      <div className="container">
+    <nav className="navbar navbar-expand-lg bg-transparent  py-3 ">
+      <div className="container blur-lg">
         <NavLink to="/" className="navbar-brand w-8" data-config-id="brand">
           <img src={logo} width="120" height="60" alt="Logo" />
         </NavLink>
@@ -64,7 +64,7 @@ export default function Header() {
                 aria-labelledby="navbarDropdown"
                 style={{ width: '100%', margin: 0 }}
               >
-                <NavLink to="/aboutfounder" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
+                <NavLink to="/founders" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
                   Founder
                   <img src={logo} alt="Icon" height='70px' className="icon-image" />
                   
