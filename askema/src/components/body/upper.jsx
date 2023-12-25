@@ -50,7 +50,7 @@ export default function Upper() {
 
     return (
         <div className="body" >
-            <div className="image">
+            <div className="image dark-overlay">
                 <img src={backgroundImages[currentImageIndex]} alt="" />
 
             </div>
@@ -62,7 +62,7 @@ export default function Upper() {
                     {/* <button className='read'>Read More</button>    */}
 
                     <a href="./contactus">
-                        <button className='contactupper'>Contact Us</button>
+                        {/* <button className='contactupper'>Contact Us</button> */}
                     </a>
                 </div>
             </div>

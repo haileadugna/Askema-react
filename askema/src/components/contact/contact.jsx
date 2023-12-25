@@ -35,10 +35,12 @@ export default function Contact() {
         });
       } else {
         // Handle the error
-        alert('Email sending failed');
+        
+        toast.error('Something went wrong!');
       }
     } catch (error) {
       console.error('Error:', error);
+      toast.error('Something went wrong!');
     }
   };
 
