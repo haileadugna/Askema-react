@@ -9,7 +9,7 @@ import product4 from '../../Assets/product4.png';
 export default function WhatWeDo() {
   return (
     <div className="whatwedo">
-      <h1 className=" text-center mb-4">What We Do</h1>
+      <h1 className=" text-center mb-4">Our product</h1>
       <hr />
 
       <div className="products row g-4">
