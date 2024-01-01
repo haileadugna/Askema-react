@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import './upper.css'
 import '../header.css'
-import image1 from '../../Assets/image1.jpg';  
+import image1 from '../../Assets/image1.jpg';
 import image2 from '../../Assets/image2.jpg'; 
 import image3 from '../../Assets/image3.jpg'; 
 import image4 from '../../Assets/image4.jpg'; 
