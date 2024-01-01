@@ -8,7 +8,6 @@ import logo5 from '../../Assets/birhanconstraction.png';
 import logo6 from '../../Assets/marathonmotors.png';
 import logo7 from '../../Assets/nationalmotors.png';
 import logo8 from '../../Assets/sunshineconstraction.png';
-import logo9 from '../../Assets/';
 
 export default function Cleints() {
   return (
@@ -51,7 +50,7 @@ export default function Cleints() {
             </div>
 
             <div className="logo5">
-              <img src={logo9} alt="" />
+              <img src={logo8} alt="" />
             </div>
 
         </div>
