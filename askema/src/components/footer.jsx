@@ -32,16 +32,16 @@ export default function Footer() {
             <h6 className="text-sm text-secondary">Company</h6>
             <ul className="list-unstyled">
               <li>
-                <a href="#" className="text-secondary">About Us</a>
+                <a href="/aboutus" className="text-secondary">About Us</a>
               </li>
               <li>
-                <a href="#" className="text-secondary">Careers</a>
+                <a href="/products" className="text-secondary">Careers</a>
               </li>
               <li>
                 <a href="#" className="text-secondary"></a>
               </li>
               <li>
-                <a href="#" className="text-secondary">Blog</a>
+                <a href="/founders" className="text-secondary">Founders</a>
               </li>
             </ul>
           </div>
@@ -50,13 +50,13 @@ export default function Footer() {
             <h6 className="text-sm text-secondary">Resources</h6>
             <ul className="list-unstyled">
               <li>
-                <a href="#" className="text-secondary">Blog</a>
+                <a href="/comment" className="text-secondary">Blog</a>
               </li>
               <li>
-                <a href="#" className="text-secondary">Service</a>
+                <a href="/products" className="text-secondary">Service</a>
               </li>
               <li>
-                <a href="#" className="text-secondary">Product</a>
+                <a href="/products" className="text-secondary">Product</a>
               </li>
               <li>
                 <a href="#" className="text-secondary"></a>
@@ -72,7 +72,7 @@ export default function Footer() {
             Copyright © {new Date().getFullYear()} |
           </p>
           <p className="text-sm text-secondary">
-           | <a href="https://www.linkedin.com/in/ahmed-elsayed-0b0b3b1b0/" className="text-secondary">bytegineus lab</a>
+           | <a href="https://www.linkedin.com/in/ahmed-elsayed-0b0b3b1b0/" className="text-secondary">byte genius lab</a>
           </p>
         </div>
       </div>

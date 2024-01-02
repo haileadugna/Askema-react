@@ -1,5 +1,4 @@
 import React from 'react'
-import image from '../../Assets/logo2.png';
 import './about.css'
 import { useTranslation } from 'react-i18next';
 

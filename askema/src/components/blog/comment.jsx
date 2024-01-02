@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 import 'flatpickr/dist/themes/light.css';
+import person1 from '../../Assets/testimonial1.jpg';
 import { useTranslation } from 'react-i18next';
 
 export default function Comment() {
+
+  const {t, i18n} = useTranslation();
   useEffect(() => {
     // ... (unchanged JavaScript code for CountUp and flatpickr)
 
@@ -20,8 +23,6 @@ export default function Comment() {
     // Clear the interval when the component is unmounted
     return () => clearInterval(intervalId);
   }, []);
-
-  const {t} = useTranslation();
 
   return (
     <section className="bg-light py-3">
@@ -42,18 +43,16 @@ export default function Comment() {
                 <div className="carousel-item active">
                 <div className="text-center">
                     <img
-                      className="w-50 mb-4 img-fluid rounded-circle"
-                      src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
+                      className="w-40 mb-4 img-fluid rounded-circle"
+                      src={person1}
                       alt=""
                     />
                     <p className="lead">
-                      "We’re not always in the position that we want to be at. We’re constantly growing. We’re
-                      constantly making mistakes. We’re constantly trying to express ourselves and actualize our
-                      dreams."
+                      {t("person1")}
                     </p>
                     <div className="author justify-content-center">
                       <div className="name ps-2">
-                        <span>Mathew Goat</span>
+                        <span>{t("Ermiyas fikire")}</span>
                       </div>
                     </div>
                   </div>
@@ -61,18 +60,16 @@ export default function Comment() {
                 <div className="carousel-item">
                 <div className="text-center">
                     <img
-                      className="w-50 mb-4 img-fluid rounded-circle"
-                      src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
+                      className="w-40 mb-4 img-fluid rounded-circle"
+                      src={person1}
                       alt=""
                     />
                     <p className="lead">
-                      "We’re not always in the position that we want to be at. We’re constantly growing. We’re
-                      constantly making mistakes. We’re constantly trying to express ourselves and actualize our
-                      dreams."
+                    {t("person1")}
                     </p>
                     <div className="author justify-content-center">
                       <div className="name ps-2">
-                        <span>John Don</span>
+                        <span>{t("Ermiyas fikire")} </span>
                       </div>
                     </div>
                   </div>
@@ -80,18 +77,16 @@ export default function Comment() {
                 <div className="carousel-item">
                 <div className="text-center">
                     <img
-                      className="w-50 mb-4 img-fluid rounded-circle"
-                      src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg"
+                      className="w-40 mb-4 img-fluid rounded-circle"
+                      src={person1}
                       alt=""
                     />
                     <p className="lead">
-                      "We’re not always in the position that we want to be at. We’re constantly growing. We’re
-                      constantly making mistakes. We’re constantly trying to express ourselves and actualize our
-                      dreams."
+                    {t("person1")}
                     </p>
                     <div className="author justify-content-center">
                       <div className="name ps-2">
-                        <span>Mathew Goat</span>
+                        <span>{t("Ermiyas fikire")}</span>
                       </div>
                     </div>
                   </div>

@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react'
 import './upper.css'
 import '../header.css'
 import image1 from '../../Assets/image1.jpg';
-import image2 from '../../Assets/image2.jpg'; 
-import image3 from '../../Assets/image3.jpg'; 
+import image2 from '../../Assets/image8.jpg'; 
+import image3 from '../../Assets/image8.jpg'; 
 import image4 from '../../Assets/image4.jpg'; 
 import image5 from '../../Assets/image5.jpg'; 
 import image6 from '../../Assets/image6.jpg'; 

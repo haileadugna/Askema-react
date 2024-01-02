@@ -1,13 +1,13 @@
 import React from 'react'
 import './cleints.css'
-import logo1 from '../../Assets/Ethioroad.png';
-import logo2 from '../../Assets/addisababa.jpeg';
-import logo3 from '../../Assets/airline.png';
-import logo4 from '../../Assets/akirconstraction.jpeg';
-import logo5 from '../../Assets/birhanconstraction.png';
+import logo1 from '../../Assets/biritshembassy.jpg';
+import logo2 from '../../Assets/goldwater.jpg';
+import logo3 from '../../Assets/awashbank.jpg';
+import logo4 from '../../Assets/moenco.jpg';
+import logo5 from '../../Assets/nefassilk.jpg';
 import logo6 from '../../Assets/marathonmotors.png';
 import logo7 from '../../Assets/nationalmotors.png';
-import logo8 from '../../Assets/sunshineconstraction.png';
+import logo8 from '../../Assets/belaymotors.jpg';
 import { useTranslation } from 'react-i18next';
 
 export default function Cleints() {
@@ -53,7 +53,7 @@ export default function Cleints() {
             </div>
 
             <div className="logo5">
-              <img src={logo8} alt="" />
+              <img src={logo1} alt="" />
             </div>
 
         </div>
