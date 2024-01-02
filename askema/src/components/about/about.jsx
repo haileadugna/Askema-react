@@ -3,17 +3,21 @@ import Footer from '../footer'
 import './about.css'
 import image1 from '../../Assets/brake.jpg';
 import Cleints from '../body/cleints';
+import teamfoto from '../../Assets/team foto.jpg';
+import { useTranslation } from 'react-i18next';
 
 export default function AboutUs() {
+
+  const {t, i18n} = useTranslation();
   return (
     <div > 
       <section className='about'>
           <div className="content">
             <div className="askema">
               <div className="text">
-                <h2>Askema Engineering</h2>
-                
-                <p>Manufactures eco-friendly brake and clutch solutions for diverse vehicles, prioritizing quality, customer satisfaction, and sustainability.</p>
+                <h2>{t("Askema Engineering")} </h2>
+                <hr />
+                <p>{t("para1")} </p>
               </div>
               <div className="image">
                 <img src={image1} alt="" />
@@ -21,25 +25,25 @@ export default function AboutUs() {
             </div>
 
             <div className="problem">
-              <h2>The Problem We Are Solving</h2>
+              <h2>{t("The Problem We Are Solving")} </h2>
               <hr />
-              <p>Amidst the concerning backdrop of over 29,000 road accidents in Ethiopia in 2022, we've identified a crucial technical challenge. These accidents, often attributed to vehicle braking and clutch-related technical issues, demand innovative solutions for enhanced road safety and vehicle performance.</p>
+              <p>{t("para2")} </p>
             </div>
 
             <div className="solution">
-              <h2>Our Solution</h2>
+              <h2>{t("Our Solution")} </h2>
               <hr />
-              <p>In response to Ethiopia's pressing car accident problem, primarily due to technical issues, we're dedicated to making a difference. Our solution involves crafting eco-friendly brake and clutch components, designed for enhanced vehicle safety. These parts are made from recycled materials, including waste from the leather, ceramic, and marble industries. Our mission is to provide a sustainable alternative, ensuring uncompromised quality and building trust among vehicle owners and organizations. We cater to small vehicle owners, heavy-duty truck companies, governmental and non-governmental bodies, prioritizing affordability and competitive pricing while promoting eco-conscious, circular production.</p>
+              <p>{t("para3")} </p>
             </div>
 
 
             <div className="vision">
-              <h2>Our Vision</h2>
+              <h2>{t("Our Vision")} </h2>
               <hr />
-              <p>Our vision is to lead Ethiopia's automotive industry by offering affordable, non-metallic brake and clutch solutions for various vehicles, with a commitment to safety and economic growth through local manufacturing. Join us on our journey towards a cleaner, safer, and economically vibrant Ethiopian automotive landscape. Explore diverse job opportunities in our mission to transform 300,000 tons of wasted bones from 246 Ethiopian slaughterhouse industries into valuable resources, benefiting both the environment and our workforce.</p>
+              <p>{t("para4")} </p>
             </div>
 
-            <h2>Why Choose Us?</h2>
+            <h2>{t("Why Choose Us?")} </h2>
             <div className="whyUs">
               
               <hr />
@@ -47,26 +51,36 @@ export default function AboutUs() {
               <div className="box">
                 <div className="import card show">
                   <img src={image1}alt="" />
-                  <h3>Import Substitution</h3>
-                  <p>Our products are locally manufactured, ensuring import substitution and supporting the Ethiopian economy.</p>
+                  <h3>{t("Import Substitution")} </h3>
+                  <p>{t("para5")} </p>
                 </div>
 
                 <div className="applicable card show">
                   <img src={image1} alt="" />
-                  <h3>Applicable</h3>
-                  <p>Our products are applicable to diverse vehicles, including cars, trucks, and buses.</p>
+                  <h3>{t("Applicable")} </h3>
+                  <p>{t("para6")} </p>
                 </div>
 
                 <div className="affordable card show">
                   <img src={image1} alt="" />
-                  <h3>Affordable</h3>
-                  <p>Our products are affordable, ensuring competitive pricing.</p>
+                  <h3>{t("Affordable")} </h3>
+                  <p>{t("para7")} </p>
                 </div>
 
               </div>
+
+
+            </div>
+
+            <div className="team">
+              <h2>{t("Our Team")} </h2>
+              <hr />
+              <img src={teamfoto} width={"80%"}  alt="Team foto" />
             </div>
             
             <Cleints/>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bH8Bx12YZTs?si=nmIA6kqj65kyLbp5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
       </section>
 

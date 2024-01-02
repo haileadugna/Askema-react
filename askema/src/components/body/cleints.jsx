@@ -8,13 +8,16 @@ import logo5 from '../../Assets/birhanconstraction.png';
 import logo6 from '../../Assets/marathonmotors.png';
 import logo7 from '../../Assets/nationalmotors.png';
 import logo8 from '../../Assets/sunshineconstraction.png';
+import { useTranslation } from 'react-i18next';
 
 export default function Cleints() {
+
+  const {t, i18n} = useTranslation();
   return (
     <div className='clients'>
-        <h2>Clients</h2>
+        <h2>{t("Clients")} </h2>
         <hr />
-        <p>Those are some of companies who have show interest on our products.</p>
+        <p>{t("clients")} </p>
         
         <div className="clients_logos">
             <div className="logo1">

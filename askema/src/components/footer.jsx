@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faTiktok, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faInstagram, faTiktok, faTelegram, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './footer.css';
 
 export default function Footer() {
@@ -10,20 +10,20 @@ export default function Footer() {
         <div className="row">
           <div className="col-md-4 mb-4 mb-md-0">
             <div className="d-flex justify-content-between p-5">
-              <a href="#" className="text-secondary">
+              <a href="https://www.facebook.com/behailu.seboka" className="text-secondary " target='_blank'>
                 <FontAwesomeIcon icon={faFacebook} size="lg" />
               </a>
-              <a href="#" className="text-secondary">
+              <a href="https://twitter.com/" className="text-secondary" target='_blank'>
                 <FontAwesomeIcon icon={faTwitter} size="lg" />
               </a>
-              <a href="#" className="text-secondary">
-                <FontAwesomeIcon icon={faInstagram} size="lg" />
+              <a href="https://www.linkedin.com/in/bethlehem-ayele-74335b106" className="text-secondary" target='_blank'>
+                <FontAwesomeIcon icon={faLinkedin} size="lg"  />
               </a>
-              <a href="#" className="text-secondary">
+              <a href="http://t.me/BethyAskemaBrakepad" className="text-secondary" target='_blank'>
                 <FontAwesomeIcon icon={faTelegram} size="lg" />
               </a>
-              <a href="#" className="text-secondary">
-                <FontAwesomeIcon icon={faTiktok} size="lg" />
+              <a href="https://web.whatsapp.com/" className="text-secondary" target='_blank'>
+                <FontAwesomeIcon icon={faWhatsapp} size="lg" />
               </a>
             </div>
           </div>

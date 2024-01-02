@@ -24,14 +24,14 @@ export default function Header() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-transparent  py-3 ">
+    <nav className="navbar navbar-expand-lg   py-3 ">
       <div className="container blur-lg">
         <NavLink to="/" className="navbar-brand w-8" data-config-id="brand">
           <img src={logo} width="120" height="60" alt="Logo" />
         </NavLink>
 
         <button
-          className="navbar-toggler shadow-none ms-2 custom-toggler"
+          className="navbar-toggler shadow-none custom-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navigation"
@@ -39,8 +39,9 @@ export default function Header() {
           aria-expanded="false"
           aria-label="Toggle navigation"
           onClick={toggleMenu}
+          style={{position: 'absolute', right: '1rem', top: '2rem'}}
         >
-          <span className="navbar-toggler-icon mt-2 text-white">
+          <span className="navbar-toggler-icon  text-white">
             <i className="fas fa-bars"></i> {/* Font Awesome bars icon */}
           </span>
         </button>
@@ -77,46 +78,29 @@ export default function Header() {
               </div>
             </li>
 
-            <li className="nav-item mx-2 dropdown" onMouseEnter={toggleProductDropdown} onMouseLeave={toggleProductDropdown}>
-              <a
-                href="#"
-                className={`nav-link ps-2 cursor-pointer dropdown-toggle ${isProductDropdownOpen ? 'active' : ''}`}
-                role="button"
-              >
-                Product
-              </a>
-              <div
-                className={`dropdown-menu ${isProductDropdownOpen ? 'show' : ''}`}
-                aria-labelledby="navbarDropdown"
-                style={{ width: '100%', margin: 0 }}
-              >
-                <NavLink to="/products" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
-                  Product
-                  <img src={logo} alt="Icon" height='70px' className="icon-image" />
-                  
-                </NavLink>
-                <NavLink to="/services" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
-                  Services
-                  <img src={logo} alt="Icon" height='70px' className="icon-image" />
-                  
-                </NavLink>
-              </div>
-            </li>
             <li className="nav-item mx-2">
-              <NavLink to="/comment" className="btn mb-0 cursor-pointer bg-gradient-dark">
-                Blog
+              <NavLink to="/products" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`}>
+                Products
               </NavLink>
             </li>
+          
             <li className="nav-item mx-2">
-              <NavLink to="/contactus" className="btn mb-0 cursor-pointer bg-gradient-dark">
-                Contact Us
+              <NavLink to="/comment" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`}>
+                Testimonial
+              </NavLink>
+            </li>
+            
+            <li className="nav-item mx-2">
+              <NavLink to="/contactus" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`}>
+                Contact
               </NavLink>
             </li>
           </ul>
         </div>
 
-        <LanguageSwitcher />
+        
       </div>
+      <LanguageSwitcher />
     </nav>
   );
 }

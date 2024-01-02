@@ -2,8 +2,11 @@ import React, {useState} from 'react'
 import './contact.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+
+  const {t, i18n} = useTranslation();
 
   const notify = () => toast("Thank you for contacting us!");
   const [formData, setFormData] = useState({
@@ -48,15 +51,15 @@ export default function Contact() {
     <div className='bodyOfcontact'>
       <section className='contact'>
         <div className="content">
-          <h2>Contact Us</h2>
-          <p>Feel free to reach out to us with any inquiries or comments. We're eager to hear from you!</p>
+          <h2>{t("Contact Us")} </h2>
+          <p>{t("feel free")} </p>
         </div>
         <div className="container">
           <div className="contactinfo">
             <div className="box">
               <div className="icon"><i class="fa fa-map-marker"  aria-hidden="true"></i></div>
               <div className="text">
-                <h3>Address</h3>
+                <h3>{t('Address')} </h3>
                 <p>Phillipos ,Woreda 11, <br />Addis Ketema, <br />Addis Ababa, <br />Ethiopia</p>
               </div>
             </div>
@@ -64,7 +67,7 @@ export default function Contact() {
             <div className="box">
               <div className="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
               <div className="text">
-                <h3>Phone</h3>
+                <h3>{t("Phone")} </h3>
                 <p>+251932070973 <br />+251965341134</p>
               </div>
             </div>
@@ -72,7 +75,7 @@ export default function Contact() {
               <div className="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
               <div>
                 <div className="text">
-                  <h3>Email</h3>
+                  <h3>{t("Email")} </h3>
                   <p>h07842233@gmail.com <br /> bethlehemayele1@gmail.com</p>
                 </div>
               </div>
@@ -81,7 +84,7 @@ export default function Contact() {
 
           <div className="contactForm">
             <form action="" onSubmit={handleSubmit} >
-              <h2>Send Message</h2>
+              <h2>{t("Send Message")} </h2>
               <div className="inputBox">
                 <input type="text" 
                 name="subject" 
@@ -89,7 +92,7 @@ export default function Contact() {
                 value={formData.subject}
                 onChange={(e) => setFormData({...formData, subject: e.target.value})}
                 />
-                <span>Full Name</span>
+                <span>{t("Full Name")} </span>
               </div>
               <div className="inputBox">
                 <input type="text" 
@@ -98,7 +101,7 @@ export default function Contact() {
                 onChange={(e) => setFormData({...formData, sender: e.target.value})} 
                 required="required" 
                 />
-                <span>Email</span>
+                <span>{t("Email")} </span>
               </div>
               <div className="inputBox">
                 <textarea 
@@ -106,7 +109,7 @@ export default function Contact() {
                 value={formData.message}
                 onChange={(e) => setFormData({...formData, message: e.target.value})}
                 ></textarea>
-                <span>Type your Message...</span>
+                <span>{t("Type your Message...")} </span>
               </div>
               <div className="inputBox">
                 <input type="submit" name="send" value="Send"  />
@@ -120,7 +123,7 @@ export default function Contact() {
         
         
       </section>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d252230.23046702318!2d38.7781448!3d8.963176849999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2set!4v1703403310546!5m2!1sen!2set" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d8116.476495083492!2d38.69927810938119!3d9.042189900000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPhillipos%20%2CWoreda%2011%2C%20Addis%20Ketema%2C%20Addis%20Ababa%2C%20Ethiopia!5e1!3m2!1sen!2set!4v1704148628024!5m2!1sen!2set" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   )
 }
