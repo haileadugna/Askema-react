@@ -53,7 +53,7 @@ export default function WhatWeDo() {
               <img src={product4} alt="Product 4" className="product-image" />
               <div className='text-center p-2'>
                 <h2>{t("BRAKE SHOE")} </h2>
-                <p>{t("brake shoe")} </p>
+                {/* <p>{t("brake shoe")} </p> */}
               </div>
             </div>
           </div>

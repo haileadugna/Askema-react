@@ -5,7 +5,7 @@
     width: 100%;    
     border-top: solid .1px black;
  
-    background-color: silver;
+    background-color: goldenrod;
     /* background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(31, 34, 37)); */
     z-index: -1;
 }

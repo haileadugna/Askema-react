@@ -67,12 +67,12 @@ export default function Header() {
               >
                 <NavLink to="/founders" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
                   Founder
-                  <img src={logo} alt="Icon" height='70px' className="icon-image" />
+                  {/* <img src={logo} alt="Icon" height='70px' className="icon-image" /> */}
                   
                 </NavLink>
                 <NavLink to="/aboutus" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
                   About The Compony
-                  <img src={logo} alt="Icon" height='70px' className="icon-image" />
+                  {/* <img src={logo} alt="Icon" height='70px' className="icon-image" /> */}
                   
                 </NavLink>
               </div>

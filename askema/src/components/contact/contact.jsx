@@ -3,6 +3,7 @@ import './contact.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useTranslation } from 'react-i18next';
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
 
@@ -10,45 +11,26 @@ export default function Contact() {
 
   const notify = () => toast("Thank you for contacting us!");
   const [formData, setFormData] = useState({
-    subject: '',
-    sender: '',
+    from_name: '',
+    from_email: '',
     message: '',
   });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch('http://localhost:3333/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+  
+    emailjs.send('service_0lu46hr', 'template_lf91snb', formData, 'dE_Zt1ninl6fhRE1y')
+      .then((result) => {
+          console.log(result.text);
+          notify(); // toast
+      }, (error) => {
+          console.log(error.text);
       });
-
-      // console.log('response', response.ok)
-      if (response.ok) {
-        // Email sent successfully, show a success message
-        
-        notify();
-        setFormData({
-          subject: '',
-          sender: '',
-          message: '',
-        });
-      } else {
-        // Handle the error
-        
-        toast.error('Something went wrong!');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      toast.error('Something went wrong!');
-    }
   };
 
   return (
     <div className='bodyOfcontact'>
+      <ToastContainer />
       <section className='contact'>
         <div className="content">
           <h2>{t("Contact Us")} </h2>
@@ -68,7 +50,7 @@ export default function Contact() {
               <div className="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
               <div className="text">
                 <h3>{t("Phone")} </h3>
-                <p>+251932070973 <br />+251965341134</p>
+                <p>+251989638541 <br />+251965341134</p>
               </div>
             </div>
             <div className="box">
@@ -87,24 +69,25 @@ export default function Contact() {
               <h2>{t("Send Message")} </h2>
               <div className="inputBox">
                 <input type="text" 
-                name="subject" 
+                name="from_name" 
                 required="required"  
-                value={formData.subject}
-                onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                value={formData.from_name}
+                onChange={(e) => setFormData({...formData, from_name: e.target.value})}
                 />
                 <span>{t("Full Name")} </span>
               </div>
               <div className="inputBox">
                 <input type="text" 
-                name="sender"
-                value={formData.sender}
-                onChange={(e) => setFormData({...formData, sender: e.target.value})} 
+                name="from_email"
+                value={formData.from_email}
+                onChange={(e) => setFormData({...formData, from_email: e.target.value})} 
                 required="required" 
                 />
                 <span>{t("Email")} </span>
               </div>
               <div className="inputBox">
                 <textarea 
+                name="message"
                 required="required"
                 value={formData.message}
                 onChange={(e) => setFormData({...formData, message: e.target.value})}
