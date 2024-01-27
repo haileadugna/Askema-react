@@ -1,5 +1,6 @@
 {
   "name": "askema",
+  "homepage": "https://askemaengineering.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
