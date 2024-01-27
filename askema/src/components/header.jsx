@@ -41,10 +41,10 @@ export default function Header() {
             <i className="fas fa-bars"></i> {/* Font Awesome bars icon */}
           </span>
         </button>
-        <div className={`collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ${isMenuOpen ? 'show' : ''}`} id="navigation">
-          <ul className="navbar-nav navbar-nav-hover ms-auto">
-            <li className="nav-item mx-2">
-              <NavLink to="/" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`}>
+        <div className={`w-100 pt-3 pb-2 py-lg-0 ${isMenuOpen ? 'show' : ''}`} id="navigation" >
+          <ul className="navbar-nav navbar-nav-hover ms-auto"  >
+            <li className="nav-item mx-2" >
+              <NavLink to="/" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`} style={{color: "#3F2305"}}>
                 Home
               </NavLink>
             </li>
@@ -52,7 +52,7 @@ export default function Header() {
               <a
                 href="#"
                 className={`nav-link ps-2 cursor-pointer dropdown-toggle ${isAboutDropdownOpen ? 'active' : ''}`}
-                role="button"
+                role="button" style={{color: "#3F2305"}}
               >
                 AboutUs
               </a>
@@ -77,19 +77,19 @@ export default function Header() {
             </li>
 
             <li className="nav-item mx-2">
-              <NavLink to="/products" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`}>
+              <NavLink to="/products" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`} style={{color: "#3F2305"}}>
                 Products
               </NavLink>
             </li>
           
             <li className="nav-item mx-2">
-              <NavLink to="/comment" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`}>
+              <NavLink to="/comment" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`} style={{color: "#3F2305"}}>
                 Testimonial
               </NavLink>
             </li>
             
             <li className="nav-item mx-2">
-              <NavLink to="/contactus" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`}>
+              <NavLink to="/contactus" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`} style={{color: "#3F2305"}}>
                 Contact
               </NavLink>
             </li>
