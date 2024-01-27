@@ -72,7 +72,7 @@ export default function Footer() {
             Copyright © {new Date().getFullYear()} |
           </p>
           <p className="text-sm text-secondary">
-           | <a href="https://www.linkedin.com/in/ahmed-elsayed-0b0b3b1b0/" className="text-secondary">byte genius lab</a>
+           | <a href="https://www.linkedin.com/in/haile-adugna-hordofa" className="text-secondary">ByteSpark Lab</a>
           </p>
         </div>
       </div>

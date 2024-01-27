@@ -6,7 +6,7 @@
 .product-card {
     position: relative; /* Add this to establish a stacking context */
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 2px solid #eee;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s;
@@ -19,7 +19,7 @@
     left: 0;
     width: 0;
     height: 4px;
-    background-color: #ff0000;
+    background-color: #3F2305;
     transition: width 0.3s ease-out;
 }
 
@@ -52,13 +52,13 @@ p {
     padding: 5px;
     margin: 0;
     font-size: 36px;
-    color: blue;
+    color: #3F2305;
 }
 
 .whatwedo hr {
     width: 40px;
     height: 1px;
-    background-color: red;
+    background-color: #3F2305;
     margin-bottom: 20px;
 }
 

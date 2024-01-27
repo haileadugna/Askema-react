@@ -25,16 +25,16 @@ export default function Comment() {
   }, []);
 
   return (
-    <section className="bg-light py-3">
+    <section className=" py-3">
       
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
-            <div className="bg-secondary text-center text-white p-5 rounded">
+            <div className=" text-center text-white p-5 rounded" style={{ backgroundColor: '#F2EAD3'}}>
               <div className="mb-4">
-                <i className="fas opacity-10 fa-quote-right fa-3x text-primary"></i>
+                <i className="fas opacity-10 fa-quote-right fa-3x"></i>
               </div>
-              <h2 className="h4 mb-4 text-success">{t("What Our Clients Are Saying")}</h2>
+              <h2 className="h4 mb-4" style={{color: '#3F2305'}}>{t("What Our Clients Are Saying")}</h2>
             </div>
           </div>
           <div className="col-lg-6">
@@ -52,7 +52,7 @@ export default function Comment() {
                     </p>
                     <div className="author justify-content-center">
                       <div className="name ps-2">
-                        <span>{t("Ermiyas fikire")}</span>
+                        <span>{t("Ermiyas Fikire")}</span>
                       </div>
                     </div>
                   </div>
@@ -69,7 +69,7 @@ export default function Comment() {
                     </p>
                     <div className="author justify-content-center">
                       <div className="name ps-2">
-                        <span>{t("Ermiyas fikire")} </span>
+                        <span>{t("Ermiyas Fikire")} </span>
                       </div>
                     </div>
                   </div>
@@ -86,7 +86,7 @@ export default function Comment() {
                     </p>
                     <div className="author justify-content-center">
                       <div className="name ps-2">
-                        <span>{t("Ermiyas fikire")}</span>
+                        <span>{t("Ermiyas Fikire")}</span>
                       </div>
                     </div>
                   </div>

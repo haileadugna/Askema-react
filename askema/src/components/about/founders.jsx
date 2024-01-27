@@ -4,8 +4,8 @@ import betty from '../../Assets/betty.jpg'
 
 export default function Founders() {
   return (
-    <div className='col text-center text-primary'>
-      <h3 className='text-primary py-5'>Co-Founders</h3>
+    <div className='col text-center' style={{color: "#3F2305"}}>
+      <h3 className=' py-5'>Company Founders</h3>
       <p className='text-white'>Meet the team behind Askema Engineering. Machanical Engineering </p>
 
       <div className='col'>
@@ -14,7 +14,7 @@ export default function Founders() {
 
             <div className="founder1-text p-2 " style={{maxWidth: "450px"}}>
             <h2 className='my-3'>Behailu Seboka</h2> 
-            <p className='text-white'><br /> Founder and CEO <br /> "አስኬማ ሁሌም በስራ ላይ" </p>
+            <p className=''><br /> Founder and CEO <br /> "አስኬማ ሁሌም በስራ ላይ" </p>
             </div>
             <div className="founder1-image blur-md">
                 <img src={behailu} height={"400px"} width={"350px"} alt="" />
@@ -31,7 +31,7 @@ export default function Founders() {
             </div>
             <div className="founder2-text p-2" style={{maxWidth: "450px"}}>
                 <h2 className='my-3'>Bethlehem Ayele</h2> 
-                <p className='text-white'>Marketing Manager</p>
+                <p className=''>Marketing Manager</p>
             </div>
             </div>
         </div>

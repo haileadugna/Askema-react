@@ -9,7 +9,7 @@ export default function Header() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
-  const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,10 +17,6 @@ export default function Header() {
 
   const toggleAboutDropdown = () => {
     setIsAboutDropdownOpen(!isAboutDropdownOpen);
-  };
-
-  const toggleProductDropdown = () => {
-    setIsProductDropdownOpen(!isProductDropdownOpen);
   };
 
   return (
@@ -58,23 +54,25 @@ export default function Header() {
                 className={`nav-link ps-2 cursor-pointer dropdown-toggle ${isAboutDropdownOpen ? 'active' : ''}`}
                 role="button"
               >
-                About
+                AboutUs
               </a>
               <div
                 className={`dropdown-menu ${isAboutDropdownOpen ? 'show' : ''}`}
-                aria-labelledby="navbarDropdown"
+                // aria-labelledby="navbarDropdown"
                 style={{ width: '100%', margin: 0 }}
               >
-                <NavLink to="/founders" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
-                  Founder
-                  {/* <img src={logo} alt="Icon" height='70px' className="icon-image" /> */}
-                  
-                </NavLink>
                 <NavLink to="/aboutus" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
-                  About The Compony
+                  Company Overview
                   {/* <img src={logo} alt="Icon" height='70px' className="icon-image" /> */}
                   
                 </NavLink>
+
+                <NavLink to="/founders" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
+                Executive Team
+                  {/* <img src={logo} alt="Icon" height='70px' className="icon-image" /> */}
+                  
+                </NavLink>
+                
               </div>
             </li>
 

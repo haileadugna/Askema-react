@@ -1,12 +1,12 @@
 /* header.css */
 .navbar{
-  background-color: goldenrod;
+  background-color: #DFD7BF;
 }
 
 .dropdown-menu {
   padding: 0;
   margin: 0;
-  border: 20px solid #fff;
+  /* border: 20px solid #fff; */
   min-width: 20rem;
 }
 
@@ -17,12 +17,4 @@
   /* padding: 10px; */
   color: #333;
   text-decoration: none;
-}
-
-.icon-image {
-  margin-right: 10px;
-}
-
-.dropdown-item:hover {
-  background-color: #f8f9fa; /* Change to the color you prefer */
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from '../footer'
 import './about.css'
 import image1 from '../../Assets/brake.jpg';
 import Cleints from '../body/cleints';

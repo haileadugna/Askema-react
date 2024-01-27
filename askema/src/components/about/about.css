@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background-color: #dcebfc;
+    background-color: #eee;
     z-index: -999;
     width: 100%;
     
@@ -24,14 +24,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 5% 10%;
+    margin: 6% 10%;
   }
 
 .about    .askema .text h2,
 .about   h2 {
         font-size: 36px;
         font-weight: 500;
-        color: blue;
+        color:  #3F2305;
     }
  
 .about .askema .image{
@@ -71,7 +71,7 @@
   .about .content .solution h2{
     font-size: 36px;
     font-weight: 500;
-    color: blue;
+    color:  #3F2305;
     margin-bottom: 0;
 
   }
@@ -90,13 +90,13 @@
 
 {
     font-weight: lighter;
-    color: #000000a2;
+    /* color: black; */
 }
 
 .about .content hr{
     width: 40px;
     height: 1px;
-    background-color: red;
+    background-color:  #3F2305;
     margin-bottom: 40px;
     margin-top: 0;
 }
@@ -147,7 +147,7 @@
 
   .about .content .card h3 {
     font-size: 18px;
-    color: blue;
+    color:  #3F2305;
   }
   
 
@@ -158,13 +158,13 @@
   
 
   .about .content .box .applicable {
-    background-color: #dcebfc;
+    background-color: #F2EAD3;
   }
 
   .about .content h2 {
     font-size: 36px;
     margin-bottom: 0;
-    color: blue;
+    color:  #3F2305;
     margin-top: 100px;
   }
 
@@ -186,7 +186,7 @@
     .about    .askema .text h2 {
         font-size: 26px;
         font-weight: 500;
-        color: blue;
+        color:  #3F2305;
     }
 
     .about .askema .text {
