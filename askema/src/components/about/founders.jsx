@@ -6,13 +6,13 @@ export default function Founders() {
   return (
     <div className='col text-center' style={{color: "#3F2305"}}>
       <h3 className=' py-5'>Company Founders</h3>
-      <p className='text-white'>Meet the team behind Askema Engineering. Machanical Engineering </p>
+      <p className=''>Meet the team behind Askema Engineering. Machanical Engineering </p>
 
-      <div className='col'>
+      <div className='col'  >
         
-        <div className="founder1 row ">
+        <div className="founder1 row " style={{  display: 'flex', justifyContent: 'space-around'}}>
 
-            <div className="founder1-text p-2 " style={{maxWidth: "450px"}}>
+            <div className="founder1-text pt-5 pe-0 " style={{maxWidth: "450px"}}>
             <h2 className='my-3'>Behailu Seboka</h2> 
             <p className=''><br /> Founder and CEO <br /> "አስኬማ ሁሌም በስራ ላይ" </p>
             </div>
@@ -23,13 +23,13 @@ export default function Founders() {
 
         </div>
 
-        <div className="founder2 row my-4">
+        <div className="founder2 row my-4" style={{  display: 'flex', justifyContent: 'space-around'}}>
 
             <div className="founder2-image blur-md">
                 <img src={betty} height={"350px"} width={"350px"} alt="" />
 
             </div>
-            <div className="founder2-text p-2" style={{maxWidth: "450px"}}>
+            <div className="founder2-text pt-5" style={{maxWidth: "450px"}}>
                 <h2 className='my-3'>Bethlehem Ayele</h2> 
                 <p className=''>Marketing Manager</p>
             </div>
