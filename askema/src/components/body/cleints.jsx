@@ -8,6 +8,7 @@ import logo5 from '../../Assets/nefassilk.jpg';
 import logo6 from '../../Assets/marathonmotors.png';
 import logo7 from '../../Assets/nationalmotors.png';
 import logo8 from '../../Assets/belaymotors.jpg';
+import logo9 from '../../Assets/Ethioroad.png';
 import { useTranslation } from 'react-i18next';
 
 export default function Cleints() {
@@ -53,7 +54,7 @@ export default function Cleints() {
             </div>
 
             <div className="logo5">
-              <img src={logo1} alt="" />
+              <img src={logo9} alt="" />
             </div>
 
         </div>
