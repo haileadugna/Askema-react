@@ -9,7 +9,7 @@ export default function Header() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
-
+  const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,6 +17,10 @@ export default function Header() {
 
   const toggleAboutDropdown = () => {
     setIsAboutDropdownOpen(!isAboutDropdownOpen);
+  };
+
+  const toggleProductDropdown = () => {
+    setIsProductDropdownOpen(!isProductDropdownOpen);
   };
 
   return (
@@ -41,10 +45,10 @@ export default function Header() {
             <i className="fas fa-bars"></i> {/* Font Awesome bars icon */}
           </span>
         </button>
-        <div className={`w-100 pt-3 pb-2 py-lg-0 ${isMenuOpen ? 'show' : ''}`} id="navigation" >
-          <ul className="navbar-nav navbar-nav-hover ms-auto"  >
-            <li className="nav-item mx-2" >
-              <NavLink to="/" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`} style={{color: "#3F2305"}}>
+        <div className={`collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ${isMenuOpen ? 'show' : ''}`} id="navigation">
+          <ul className="navbar-nav navbar-nav-hover ms-auto">
+            <li className="nav-item mx-2">
+              <NavLink to="/" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`} style={{color:"white"}}>
                 Home
               </NavLink>
             </li>
@@ -52,21 +56,22 @@ export default function Header() {
               <a
                 href="#"
                 className={`nav-link ps-2 cursor-pointer dropdown-toggle ${isAboutDropdownOpen ? 'active' : ''}`}
-                role="button" style={{color: "#3F2305"}}
+                role="button"
+                style={{color:"white"}}
               >
-                AboutUs
+                About
               </a>
               <div
                 className={`dropdown-menu ${isAboutDropdownOpen ? 'show' : ''}`}
-                // aria-labelledby="navbarDropdown"
-                style={{ width: '100%', margin: 0 }}
+                aria-labelledby="navbarDropdown"
+                style={{ width: '100%', margin: 0 }} 
+               
               >
                 <NavLink to="/aboutus" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
-                  Company Overview
+                Discover Us
                   {/* <img src={logo} alt="Icon" height='70px' className="icon-image" /> */}
                   
                 </NavLink>
-
                 <NavLink to="/founders" className="dropdown-item" style={{ height: '80px', width: '100%'}}>
                 Executive Team
                   {/* <img src={logo} alt="Icon" height='70px' className="icon-image" /> */}
@@ -77,19 +82,19 @@ export default function Header() {
             </li>
 
             <li className="nav-item mx-2">
-              <NavLink to="/products" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`} style={{color: "#3F2305"}}>
+              <NavLink to="/products" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`} style={{color:"white"}}>
                 Products
               </NavLink>
             </li>
           
             <li className="nav-item mx-2">
-              <NavLink to="/comment" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`} style={{color: "#3F2305"}}>
+              <NavLink to="/comment" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`} style={{color:"white"}}>
                 Testimonial
               </NavLink>
             </li>
             
             <li className="nav-item mx-2">
-              <NavLink to="/contactus" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`} style={{color: "#3F2305"}}>
+              <NavLink to="/contactus" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`} style={{color:"white"}}>
                 Contact
               </NavLink>
             </li>

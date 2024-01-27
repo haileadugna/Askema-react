@@ -29,13 +29,13 @@
   .aboutaskema h1 {
     /* font-family: 'Times New Roman', Times, serif; */
     margin: 0;
-    color: #3F2305;
+    color: #CF0A0A;
   }
 
   .aboutaskema hr{
     width: 40px;
     height: 1px;
-    background-color: #3F2305;
+    background-color: #CF0A0A;
     margin-bottom: 30px;
     margin-top: 0;
 }

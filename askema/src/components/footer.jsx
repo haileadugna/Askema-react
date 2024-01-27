@@ -29,37 +29,37 @@ export default function Footer() {
           </div>
 
           <div className="col-md-4">
-            <h6 className="text-sm text-secondary">Company</h6>
+            <h6 className="text-sm">Company</h6>
             <ul className="list-unstyled">
               <li>
-                <a href="/aboutus" className="text-secondary">About Us</a>
+                <a href="/aboutus" className="">About Us</a>
               </li>
               <li>
-                <a href="/products" className="text-secondary">Careers</a>
+                <a href="/products" className="">Careers</a>
               </li>
               <li>
-                <a href="#" className="text-secondary"></a>
+                <a href="#" className=""></a>
               </li>
               <li>
-                <a href="/founders" className="text-secondary">Founders</a>
+                <a href="/founders" className="">Founders</a>
               </li>
             </ul>
           </div>
 
           <div className="col-md-4">
-            <h6 className="text-sm text-secondary">Resources</h6>
+            <h6 className="text-sm">Resources</h6>
             <ul className="list-unstyled">
               <li>
-                <a href="/comment" className="text-secondary">Blog</a>
+                <a href="/comment" className="">Blog</a>
               </li>
               <li>
-                <a href="/products" className="text-secondary">Service</a>
+                <a href="/products" className="">Service</a>
               </li>
               <li>
-                <a href="/products" className="text-secondary">Product</a>
+                <a href="/products" className="">Product</a>
               </li>
               <li>
-                <a href="#" className="text-secondary"></a>
+                <a href="#" className=""></a>
               </li>
             </ul>
           </div>
@@ -68,11 +68,11 @@ export default function Footer() {
         <hr className="border-dark mt-4 mb-4" />
 
         <div className="text-center d-flex justify-content-center space-10">
-          <p className="text-sm text-secondary">
-            Copyright © {new Date().getFullYear()} |
+          <p className="text-sm ">
+            Copyright © 2024  |
           </p>
-          <p className="text-sm text-secondary">
-           | <a href="https://www.linkedin.com/in/haile-adugna-hordofa" className="text-secondary">ByteSpark Lab</a>
+          <p className="text-sm">
+           | <a href="https://www.linkedin.com/in/haile-adugna-hordofa" className="">ByteSpark Lab</a>
           </p>
         </div>
       </div>
