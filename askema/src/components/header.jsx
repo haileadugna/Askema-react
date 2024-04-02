@@ -98,6 +98,11 @@ export default function Header() {
                 Contact
               </NavLink>
             </li>
+            <li className="nav-item mx-2">
+              <NavLink to="/contactus" className={`nav-link ps-2 cursor-pointer ${location.pathname === '/' ? 'active' : ''}`} style={{color:"white"}}>
+                Contact
+              </NavLink>
+            </li>
           </ul>
         </div>
 

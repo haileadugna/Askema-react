@@ -21,7 +21,7 @@ export default function Founders() {
             </div>
 
 
-        </div>
+        </div>``
 
         <div className="founder2 row my-4" style={{  display: 'flex', justifyContent: 'space-around'}}>
 
