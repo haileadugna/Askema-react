@@ -6,7 +6,7 @@ export default function Founders() {
   return (
     <div className='col text-center' style={{color: "#3F2305"}}>
       <h3 className=' py-5'>Company Founders</h3>
-      <p className=''>Meet the team behind Askema Engineering. Machanical Engineering </p>
+      <p className=''>Meet the team behind Askema Engineering.  </p>
 
       <div className='col'  >
         
@@ -14,7 +14,7 @@ export default function Founders() {
 
             <div className="founder1-text pt-5 pe-0 " style={{maxWidth: "450px"}}>
             <h2 className='my-3'>Behailu Seboka</h2> 
-            <p className=''><br /> Founder and CEO <br /> "አስኬማ ሁሌም በስራ ላይ" </p>
+            <p className=''><br /> Founder and CEO <br />Machanical Engineering <br/>"አስኬማ ሁሌም በስራ ላይ" </p>
             </div>
             <div className="founder1-image blur-md">
                 <img src={behailu} height={"400px"} width={"350px"} alt="" />
