@@ -1,4 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState} from 'react'
+import './contact.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from 'react-i18next';
 
 function News() {
     const [newsItems, setNewsItems] = useState([]);
