@@ -43,6 +43,9 @@ export default function Footer() {
               <li>
                 <a href="/founders" className="">Founders</a>
               </li>
+              <li>
+                <a href="./admin/admin.php" className="">admin</a>
+              </li>
             </ul>
           </div>
 
