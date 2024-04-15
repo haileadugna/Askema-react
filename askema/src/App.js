@@ -10,6 +10,7 @@ import Product from './components/product/product';
 import Footer from './components/footer';
 import Comment from './components/blog/comment';
 import Founders from './components/about/founders';
+import News from './components/news/news';
 
 
 function App() {
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route exact path="/founders">
             <Founders/>
+          </Route>
+          <Route exact path="/news">
+            <News/>
           </Route>
 
         </Switch>
