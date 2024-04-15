@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import 'react-toastify/dist/ReactToastify.css';
 import './news.css';
 import image4 from '../../Assets/news4.jpeg';
-import image2 from '../../Assets/news2.jpeg';
+import image2 from '../../Assets/news5.jpeg';
 import image1 from '../../Assets/news1.webp';
 
 

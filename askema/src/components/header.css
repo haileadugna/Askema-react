@@ -1,12 +1,14 @@
 /* header.css */
 .navbar{
   background-color: #1b0101;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .dropdown-menu {
   padding: 0;
   margin: 0;
-  /* border: 20px solid #fff; */
   min-width: 20rem;
 }
 
@@ -19,3 +21,6 @@
   text-decoration: none;
 }
 
+.navbar.scrolled {
+  background-color: #1b0101;
+}
