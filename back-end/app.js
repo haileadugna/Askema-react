@@ -39,7 +39,7 @@ app.post('/news', upload.single('image'), (req, res) => {
   const saveImage = new imageModel({
   name: req.body.name,
   img: {
-    data: fs.readFileSync('/uploads/' + req.file.filename),
+    data: fs.readFileSync('uploads/' + req.file.filename),
     contentType: 'image/png',
   }
   }
@@ -53,13 +53,33 @@ app.post('/news', upload.single('image'), (req, res) => {
     console.log(err);
     res.status(500).json({ message: 'Image upload failed' });
   });
+  res.send('Image uploaded successfully');
 
 }
 );
+
+app.get('/news', (req, res) => {
+  imageModel.find({}, (err, images) => {
+    if (err) {
+      console.log(err);
+      res.status(500).json({ message: 'Internal server error' });
+    } else {
+      res.json(images);
+    }
+  });
+});
+
+const imageSchema = new mongoose.Schema({
+  name: String,
+  img: {
+    data: Buffer,
+    contentType: String
+  }
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-module.exports = app;
+module.exports = imageModel = mongoose.model('imageModel', imageSchema);
