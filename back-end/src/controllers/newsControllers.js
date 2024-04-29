@@ -19,8 +19,8 @@ const getNews = (req, res) => {
 // Create new news
 const createNews = (req, res) => {
   const { title, description, date, link, image, time, company} = req.body;
-  if ( !title || ! description || !link || !image ) {
-    return res.status(400).json({ message: 'Name and age are required' });
+  if (null) {
+    return res.status(400).json({ message: 'this are required' });
   }
 
   const id = uuidv4();

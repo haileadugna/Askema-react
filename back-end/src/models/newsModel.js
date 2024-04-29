@@ -1,10 +1,15 @@
+const mongoose = require('mongoose');
+
+
+
+
 let database = [];
 
 const getAllNews = () => {
   return database;
 };
 
-const getNewsById = (personId) => {
+const getNewsById = (newsId) => {
   return database.find(news => news.id === newsId);
 };
 
