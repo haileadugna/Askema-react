@@ -1,38 +1,17 @@
 const mongoose = require('mongoose');
 
+const newsSchema = new mongoose.Schema({
+  title: String,
+  description: String,
+  date: Date,
+  link: String,
+  image: {
+    name: String,                                             
+    data: Buffer,
+    contentType: String
+  },
+  time: String,
+  company: String
+});
 
-
-
-let database = [];
-
-const getAllNews = () => {
-  return database;
-};
-
-const getNewsById = (newsId) => {
-  return database.find(news => news.id === newsId);
-};
-
-const addNews = (newNews) => {
-  database.push(newNews);
-};
-
-const updateNews = (newsId, updatedNews) => {
-  const newsIndex = database.findIndex(news => news.id === newsId);
-  if (newsIndex !== -1) {
-    database[newsIndex] = { ...database[newsIndex], ...updatedNews };
-    return database[newsIndex];
-  }
-  return null;
-};
-
-const deleteNews = (newsId) => {
-  const newsIndex = database.findIndex(news => news.id === newsId);
-  if (newsIndex !== -1) {
-    const deletedNews = database.splice(newsIndex, 1);
-    return deletedNews[0];
-  }
-  return null;
-};
-
-module.exports = { getAllNews, getNewsById, addNews, updateNews, deleteNews };
+module.exports = mongoose.model('News', newsSchema);

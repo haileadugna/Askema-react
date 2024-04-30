@@ -1,54 +1,83 @@
 const { v4: uuidv4 } = require('uuid');
-const newsModel = require('../models/newsModel');
+const News = require('../models/newsModel');
 
-// Get all news or news by id
-const getNews = (req, res) => {
+const getNews = async (req, res) => {
   const { newsId } = req.params;
-  if (newsId) {
-    const news = newsModel.getPersonById(newsId);
-    if (news) {
-      res.json(news);
+  try {
+    if (newsId) {
+      const news = await News.findById(newsId);
+      if (news) {
+        res.json(news);
+      } else {
+        res.status(404).json({ message: 'News not found' });
+      }
     } else {
-      res.status(404).json({ message: 'Person not found' });
+      const news = await News.find();
+      res.json(news);
     }
-  } else {
-    res.json(newsModel.getAllNews());
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
   }
 };
 
-// Create new news
-const createNews = (req, res) => {
-  const { title, description, date, link, image, time, company} = req.body;
-  if (null) {
-    return res.status(400).json({ message: 'this are required' });
+const createNews = async (req, res) => {
+  const { title, description, date, link, time, company } = req.body;
+  const image = {
+    name: req.file.originalname,
+    data: req.file.buffer,
+    contentType: req.file.mimetype
+  };
+  try {
+    const newNews = new News({
+      title,
+      description,
+      date,
+      link,
+      image,
+      time,
+      company
+    });
+    await newNews.save();
+    res.status(200).json(newNews);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
   }
-
-  const id = uuidv4();
-  const newNews = { id, title, description, date, link, image, time, company };
-  newsModel.addNews(newNews);
-  res.status(200).json(newNews);
 };
 
-// Update news
-const updateNews = (req, res) => {
+const updateNews = async (req, res) => {
   const { newsId } = req.params;
-  const { title, description, date, link, image, time, company} = req.body;
-  const updatedNews = newsModel.updateNews(personId, { title, description, date, link, image, time, company});
-  if (updatedNews) {
-    res.json(updatedNews);
-  } else {
-    res.status(404).json({ message: 'Person not found' });
+  const { title, description, date, link, time, company } = req.body;
+  try {
+    const updatedNews = await News.findByIdAndUpdate(
+      newsId,
+      { title, description, date, link, time, company },
+      { new: true }
+    );
+    if (updatedNews) {
+      res.json(updatedNews);
+    } else {
+      res.status(404).json({ message: 'News not found' });
+    }
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
   }
 };
 
-// Delete news
-const deleteNews = (req, res) => {
+const deleteNews = async (req, res) => {
   const { newsId } = req.params;
-  const deletedNews = newsModel.deleteNews(newsId);
-  if (deletedNews) {
-    res.json({ message: 'Person deleted successfully' });
-  } else {
-    res.status(404).json({ message: 'Person not found' });
+  try {
+    const deletedNews = await News.findByIdAndDelete(newsId);
+    if (deletedNews) {
+      res.json({ message: 'News deleted successfully' });
+    } else {
+      res.status(404).json({ message: 'News not found' });
+    }
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
   }
 };
 
