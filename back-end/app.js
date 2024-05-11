@@ -5,6 +5,7 @@ const cors = require('./src/middlewares/cors');
 const errorHandler = require('./src/middlewares/errorHandler');
 const newsRoutes = require('./src/routes/newsRoutes');
 const clientRoutes = require('./src/routes/clientRoutes')
+const adminRoutes = require('./src/routes/adminRoutes');
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(cors);
 
 app.use('/news', newsRoutes);
 app.use('/clients', clientRoutes);
+app.use('/identifyurself', adminRoutes);
 
 app.use((req, res) => {
   res.status(404).json({ message: 'Endpoint not found' });

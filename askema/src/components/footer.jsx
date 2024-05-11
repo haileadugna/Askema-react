@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faTiktok, faTelegram, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './footer.css';
+import { NavLink } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -44,7 +45,9 @@ export default function Footer() {
                 <a href="/founders" className="">Founders</a>
               </li>
               <li>
-                <a href="./admin/admin.php" className="">admin</a>
+                <NavLink to="/admin" >
+                  <a href="./admin/admin.php" className="">admin</a>
+                </NavLink>
               </li>
             </ul>
           </div>

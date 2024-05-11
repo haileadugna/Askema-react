@@ -11,6 +11,9 @@ import Footer from './components/footer';
 import Comment from './components/blog/comment';
 import Founders from './components/about/founders';
 import News from './components/news/news';
+import NewsEdit from './components/admin/NewsEdit';
+import SignIn from './components/admin/SigninPage';
+import AddClientTestimonail from './components/admin/ClientTestimonail';
 
 
 function App() {
@@ -43,7 +46,16 @@ function App() {
           <Route exact path="/news">
             <News/>
           </Route>
-
+          <Route exact path="/admin">
+            <SignIn/>
+          </Route>
+          <Route exact path="/admin/news">
+            <NewsEdit/>
+          </Route>
+          <Route exact path="/admin/addtestimonail">
+            <AddClientTestimonail
+            />
+          </Route>
         </Switch>
       </div>
       <Footer/>
