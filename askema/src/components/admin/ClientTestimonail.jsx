@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useParams, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const AddClientTestimonail = () => {
+const AddClientTestimonial = () => {
+  const { id } = useParams();
+  // const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     testimonial: '',
@@ -10,52 +14,66 @@ const AddClientTestimonail = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
+  useEffect(() => {
+    if (id) {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get(`http://localhost:3000/clients/${id}`);
+          setFormData({
+            name: response.data.name,
+            testimonial: response.data.testimonial,
+            image: response.data.image
+          });
+        } catch (error) {
+          console.error('Error fetching testimonial:', error);
+        }
+      };
+      fetchData();
+    }
+  }, [id]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleImageChange = (e) => {
-    setFormData({
-      ...formData,
-      image: e.target.files[0]
-    });
+    setFormData(prev => ({ ...prev, image: e.target.files[0] }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
-    setSuccess('');
+    const formDataToSend = new FormData();
+    formDataToSend.append('name', formData.name);
+    formDataToSend.append('testimonial', formData.testimonial);
+    formDataToSend.append('image', formData.image);
 
     try {
-      const formDataToSend = new FormData();
-      formDataToSend.append('name', formData.name);
-      formDataToSend.append('testimonial', formData.testimonial);
-      formDataToSend.append('image', formData.image);
-
-      const response = await axios.post('http://localhost:3000/clients', formDataToSend, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      });
+      let response;
+      if (id) {
+        response = await axios.put(`http://localhost:3000/clients/${id}`, formDataToSend);
+      } else {
+        response = await axios.post('http://localhost:3000/clients', formDataToSend);
+      }
 
       if (response.data.success) {
         setSuccess(response.data.message);
+        // navigate('/admin/testimonials'); // Redirect to the list view
       } else {
         setError(response.data.message);
       }
     } catch (error) {
-      console.error('Error adding client:', error);
-      setError('An error occurred while adding the client. Please try again later.');
+      console.error('Error submitting testimonial:', error);
+      setError('An error occurred while submitting the testimonial. Please try again later.');
     }
   };
 
   return (
     <div style={{ maxWidth: '400px', margin: '0 auto', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
-      <h2>Add Client</h2>
+      <NavLink to="/admin/news" >
+          Add News
+      </NavLink>
+      <h2>Add Testimonail Client</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Name:</label>
@@ -77,4 +95,4 @@ const AddClientTestimonail = () => {
   );
 };
 
-export default AddClientTestimonail;
+export default AddClientTestimonial;

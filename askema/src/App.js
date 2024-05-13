@@ -14,6 +14,8 @@ import News from './components/news/news';
 import NewsEdit from './components/admin/NewsEdit';
 import SignIn from './components/admin/SigninPage';
 import AddClientTestimonail from './components/admin/ClientTestimonail';
+import NewsList from './components/admin/DisplayNews';
+import TestimonialsList from './components/admin/DisplayClient';
 
 
 function App() {
@@ -55,6 +57,12 @@ function App() {
           <Route exact path="/admin/addtestimonail">
             <AddClientTestimonail
             />
+          </Route>
+          <Route exact path="/admin/newsdisplay">
+            <NewsList/>
+          </Route>
+          <Route exact path="/admin/clientdisplay">
+            <TestimonialsList/>
           </Route>
         </Switch>
       </div>

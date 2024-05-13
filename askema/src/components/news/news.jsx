@@ -18,7 +18,7 @@ const newsData = [
     {
         id: 2,
         source: 'Startup Ethiopia',
-        title: 'ASKEMA , Ethiopian brake pad manufacturing startup, is attending Startup Ethiopia Exhibition .',
+        title: 'ASKEMA , Ethiopian brake pad manufacturing startup, is attending Startup Ethiopia Exhibition.',
         image: image2,
         link: 'https://www.linkedin.com/feed/update/urn:li:activity:7185199359750197249/?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7185199359750197249%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29',
         date: "April 11-15,2024",

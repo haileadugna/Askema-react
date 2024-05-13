@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios'; // You may need to install axios for making HTTP requests
 import './NewsEdit.css';
 import { NavLink} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const NewsEdit = () => {
+  const { id } = useParams(); // Get the ID from URL
+  // const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -13,6 +16,21 @@ const NewsEdit = () => {
     time: '',
     company: ''
   });
+
+  useEffect(() => {
+    if (id) {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get(`http://localhost:3000/news/${id}`);
+          setFormData({ ...response.data });
+        } catch (error) {
+          console.error('Error fetching news item:', error);
+        }
+      };
+
+      fetchData();
+    }
+  }, [id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,23 +60,13 @@ const NewsEdit = () => {
     formDataToSend.append('company', formData.company);
 
     try {
-      await axios.post('http://localhost:3000/news', formDataToSend, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      });
-      console.log('News submitted successfully!');
-      // Reset the form after successful submission
-      setFormData({
-        title: '',
-        description: '',
-        date: '',
-        link: '',
-        image: null,
-        time: '',
-        company: ''
-      });
-      alert('News submitted successfully!');
+      if (id) {
+        await axios.put(`http://localhost:3000/news/${id}`, formData);
+      } else {
+        await axios.post('http://localhost:3000/news', formData);
+      }
+      alert('News updated successfully!');
+      // navigate('/news');
     } catch (error) {
       console.error('Error submitting news:', error);
       alert('Error submitting news. Please try again later.');
@@ -66,9 +74,17 @@ const NewsEdit = () => {
   };
 
   return (
-    <div >
+    <div style={{ maxWidth: '650px', margin: '0 auto', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
         <NavLink to="/admin/addtestimonail" >
             Add Testimonail
+        </NavLink>
+        <br />
+        <NavLink to="/admin/newsdisplay" >
+            Display News
+        </NavLink>
+        <br />
+        <NavLink to="/admin/clientdisplay" >
+            Display Client
         </NavLink>
       
     
