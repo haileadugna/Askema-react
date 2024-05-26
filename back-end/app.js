@@ -1,7 +1,7 @@
 const express = require('express');
 const connectDB = require('./db');
 const bodyParser = require('body-parser');
-const cors = require('./src/middlewares/cors');
+const cors = require('cors');
 const errorHandler = require('./src/middlewares/errorHandler');
 const newsRoutes = require('./src/routes/newsRoutes');
 const clientRoutes = require('./src/routes/clientRoutes')
@@ -13,7 +13,7 @@ const app = express();
 connectDB();
 
 app.use(bodyParser.json());
-app.use(cors);
+app.use(cors());
 
 app.use('/news', newsRoutes);
 app.use('/clients', clientRoutes);
