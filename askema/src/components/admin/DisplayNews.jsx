@@ -19,6 +19,7 @@ const NewsList = () => {
     fetchNewsItems();
   }, []);
 
+  console.log(newsItems)
   // Delete a news item
   const handleDelete = async (id) => {
     try {
@@ -38,6 +39,7 @@ const NewsList = () => {
       <ul>
         {newsItems.map(item => (
           <li key={item.id} style={{ margin: '20px', borderBottom: '1px solid #ccc', paddingBottom: '10px' }}>
+            {/* <img src={news.imageUrl} alt="News Image" /> */}
             <h3>{item.title}</h3>
             <p>{item.description}</p>
             <small>Date: {item.date}</small><br />
