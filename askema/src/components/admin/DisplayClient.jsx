@@ -32,7 +32,7 @@ const TestimonialsList = () => {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
       <h1>Client Testimonials</h1>
-      <NavLink to="/admin/addtestimonial">Add Testimonial</NavLink>
+      <NavLink to="/admin/addtestimonail">Add Testimonial</NavLink>
       <ul>
         {testimonials.map((testimonial) => (
           <li key={testimonial.id}>
