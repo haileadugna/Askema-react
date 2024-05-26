@@ -1,59 +1,56 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
 import './news.css';
-import image4 from '../../Assets/news4.jpeg';
-import image2 from '../../Assets/news5.jpeg';
-import image1 from '../../Assets/news1.webp';
-
-
-const newsData = [
-    {
-        id: 1,
-        source: 'Shega Media',
-        title: ' Inspiring ASKEMA\'s  entrepreneurial journey',
-        image: image1,
-        link: 'https://shega.co/post/childhood-mechanic-turns-entrepreneur-manufacturing-eco-friendly-brake-pads/',
-        date: "",
-    },
-    {
-        id: 2,
-        source: 'Startup Ethiopia',
-        title: 'ASKEMA , Ethiopian brake pad manufacturing startup, is attending Startup Ethiopia Exhibition.',
-        image: image2,
-        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7185199359750197249/?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7185199359750197249%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29',
-        date: "April 11-15,2024",
-
-    },
-    {
-        id: 3,
-        source: 'Ashewa Technologies',
-        title: 'ASKEMA & Ashewa Technologies signed an agreement to work together.',
-        image: image4,
-        link: 'https://www.linkedin.com/feed/hashtag/?keywords=ethiopian&highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7161231769927643136',
-        date: "",
-    },
-    {
-        id: 4,
-        source: 'JICA',
-        title: 'ASKEMA attended JICA - Road show -African startups networking and experience sharing event.',
-        image: image4,
-        link: 'https://www.linkedin.com/feed/hashtag/?keywords=ethiopian&highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7161231769927643136',
-        date: "Tokyo, Japan in Feb, 2024",
-    }
-];
 
 function News() {
     const [newsItems, setNewsItems] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('http://localhost:3000/news');
+                const processedData = response.data.map(async (news) => {
+                    // Convert Buffer to base64 URL using FileReader
+                    const base64String = await bufferToBase64(news.image.data);
+                    const imageUrl = `data:${news.image.contentType};base64,${base64String}`;
+                    return { ...news, imageUrl };
+                });
+                // Resolve promises
+                const resolvedData = await Promise.all(processedData);
+                setNewsItems(resolvedData);
+            } catch (error) {
+                console.error('Error fetching news:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    // Function to convert Buffer data to base64 URL using FileReader
+    const bufferToBase64 = (buffer) => {
+        return new Promise((resolve, reject) => {
+            const blob = new Blob([buffer], { type: 'image/jpeg' });
+            const reader = new FileReader();
+            reader.readAsDataURL(blob);
+            reader.onloadend = () => {
+                resolve(reader.result.split(',')[1]);
+            };
+            reader.onerror = reject;
+        });
+    };
 
     return (
         <section id="news">
             <h2>Our new stories</h2>
             <div className="news_container">
-                {newsData.map((news, index) => (
-                    <div className="news-item" key={index}>
-                        <img src={news.image} alt="News Image" />
-                        <a href={news.link}>{news.source}</a>
-                        <h3>{news.title}</h3>
+                {newsItems.map((news) => (
+                    console.log('Image URL:', news.imageUrl),
+                    console.log('Image Data:', news.image),
+                    <div className="news-item" key={news._id}>
+                        <img src={news.imageUrl} alt="News Image" />
+                        <a href={news.link}>{news.title}</a>
+                        <p>{news.description}</p>
                         <p>{news.date}</p>
                     </div>
                 ))}
