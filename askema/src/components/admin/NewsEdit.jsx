@@ -63,6 +63,7 @@ const NewsEdit = () => {
       if (id) {
         await axios.put(`http://localhost:3000/news/${id}`, formData);
       } else {
+        // console.log(formData.image, 'hey what do u think')
         await axios.post('http://localhost:3000/news', formData);
       }
       alert('News updated successfully!');
