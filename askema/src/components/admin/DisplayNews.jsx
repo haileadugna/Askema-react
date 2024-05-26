@@ -34,7 +34,7 @@ const NewsList = () => {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
       <h1>News List</h1>
-      <NavLink to="/admin/newsedit">Add News</NavLink>
+      <NavLink to="/admin/news">Add News</NavLink>
       <ul>
         {newsItems.map(item => (
           <li key={item.id} style={{ margin: '20px', borderBottom: '1px solid #ccc', paddingBottom: '10px' }}>
