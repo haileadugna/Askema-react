@@ -1,4 +1,4 @@
-#Askema Engineering#
+###Askema Engineering#
 Welcome to the Askema Engineering project! This repository contains a web application built using React, CSS, and Express. Below you'll find all the information you need to get started with the project, including setup instructions, a brief overview of the project structure, and guidelines for contributing.
 
 #Table of Contents
@@ -108,7 +108,5 @@ Create a new branch (git checkout -b feature/YourFeature)
 Commit your changes (git commit -am 'Add new feature')
 Push to the branch (git push origin feature/YourFeature)
 Create a new Pull Request
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 Thank you for checking out the Askema Engineering project! If you have any questions or need further assistance, please feel free to open an issue or contact the project maintainers.
