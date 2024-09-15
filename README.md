@@ -59,33 +59,6 @@ Copy code
 npm start
 This will start both the React development server and the Express server.
 
-Project Structure
-Here's an overview of the project structure:
-
-bash
-Copy code
-askema-react/
-├── Askema/                   # React front-end
-│   ├── public/               # Public
-│   ├── src/                  # Source files
-│   │   ├── Assets/       # React images
-│   │   ├── components/            # React components
-│   │   |__ Locales/        # Languages changes
-│   └── package.json          # Front-end dependencies
-|   |── App.js   
-├── server/                   # Express back-end
-│   ├── routes/               # API routes
-│   ├── controllers/          # Route handlers
-│   ├── models/               # Database models
-│   ├── app.js                # Express app
-│   └── server.js             # Server entry point
-├── .gitignore                # Git ignore file
-├── package.json              # Project dependencies
-├── README.md                 # Project documentation
-└── .env                      # Environment variables
-Usage
-Running the application:
-
 To run the application in development mode, use:
 
 bash
